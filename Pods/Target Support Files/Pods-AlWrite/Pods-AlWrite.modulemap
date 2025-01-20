@@ -1,0 +1,6 @@
+module Pods_AlWrite {
+  umbrella header "Pods-AlWrite-umbrella.h"
+
+  export *
+  module * { export * }
+}

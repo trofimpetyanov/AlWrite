@@ -1,0 +1,12 @@
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScript2D.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptAnalyzer.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptDocument.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptGesture.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptInk.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptMath.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptMLOrt.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptPrediction.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptShape.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptText.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptEngine.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libiink.framework
