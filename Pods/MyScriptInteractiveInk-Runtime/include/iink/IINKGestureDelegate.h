@@ -82,6 +82,9 @@ typedef NS_ENUM(NSUInteger, IINKGestureAction)
 /**
  * Invoked when a portion of text has been underlined.
  *
+ * To activate underline detection in a Raw Content part, add "underline" to the
+ * "raw-content.pen.gestures" configuration list.
+ *
  * @param editor the editor.
  * @param tool the tool used to perform the gesture.
  * @param gestureStrokeId the id of the gesture stroke.
@@ -95,6 +98,9 @@ typedef NS_ENUM(NSUInteger, IINKGestureAction)
 
 /**
  * Invoked when a portion of text has been surrounded.
+ *
+ * To activate surround detection in a Raw Content part, add "surround" to
+ * the "raw-content.pen.gestures" configuration list.
  *
  * @param editor the editor.
  * @param tool the tool used to perform the gesture.
@@ -110,6 +116,9 @@ typedef NS_ENUM(NSUInteger, IINKGestureAction)
 /**
  * Invoked when a join gesture has been drawn between two portions of a text line,
  * or at the beginning or end of a line.
+ *
+ * To activate join detection in a Raw Content part, add "join" to the
+ * "raw-content.pen.gestures" configuration list.
  *
  * @param editor the editor.
  * @param tool the tool used to perform the gesture.
@@ -128,6 +137,9 @@ typedef NS_ENUM(NSUInteger, IINKGestureAction)
  * Invoked when an insert gesture has been drawn between two portions of a text line,
  * or at the beginning or end of a line.
  *
+ * To activate insert detection in a Raw Content part, add "insert" to the
+ * "raw-content.pen.gestures" configuration list.
+ *
  * @param editor the editor.
  * @param tool the tool used to perform the gesture.
  * @param gestureStrokeId the id of the gesture stroke.
@@ -144,6 +156,9 @@ typedef NS_ENUM(NSUInteger, IINKGestureAction)
 /**
  * Invoked when a portion of text has been striked through.
  *
+ * To activate strikethrough detection in a Raw Content part, add "strike-through"
+ * "raw-content.pen.gestures" configuration list.
+ *
  * @param editor the editor.
  * @param tool the tool used to perform the gesture.
  * @param gestureStrokeId the id of the gesture stroke.
@@ -157,6 +172,9 @@ typedef NS_ENUM(NSUInteger, IINKGestureAction)
 
 /**
  * Invoked when a portion of text has been scratched.
+ *
+ * To activate scratch detection in a Raw Content part, add "scratch-out" to
+ * the "raw-content.pen.gestures" configuration list.
  *
  * @param editor the editor.
  * @param tool the tool used to perform the gesture.

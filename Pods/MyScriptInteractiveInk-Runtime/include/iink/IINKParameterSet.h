@@ -97,7 +97,7 @@
  *   * IINKErrorRuntime when entry at `key` is not a string.
  * @return the value.
  */
-- (nonnull NSString *)getStringForKey:(nonnull NSString *)key
+- (nullable NSString *)getStringForKey:(nonnull NSString *)key
                          defaultValue:(nonnull NSString *)defaultValue
                                 error:(NSError * _Nullable * _Nullable)error
                       NS_SWIFT_NAME(string(forKey:defaultValue:));

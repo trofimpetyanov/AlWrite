@@ -34,6 +34,9 @@ typedef NS_ENUM(NSUInteger, IINKOffscreenGestureAction)
 /**
  * Invoked when a portion of text has been underlined.
  *
+ * To activate underline detection in a Raw Content part, add "underline" to the
+ * "raw-content.pen.gestures" configuration list.
+ *
  * @param editor the offscreen editor.
  * @param gestureStrokeId the id of the gesture stroke.
  * @param itemIds the underlined portion of text.
@@ -45,6 +48,9 @@ typedef NS_ENUM(NSUInteger, IINKOffscreenGestureAction)
 
 /**
  * Invoked when a portion of text has been surrounded.
+ *
+ * To activate surround detection in a Raw Content part, add "surround" to
+ * the "raw-content.pen.gestures" configuration list.
  *
  * @param editor the offscreen editor.
  * @param gestureStrokeId the id of the gesture stroke.
@@ -58,6 +64,9 @@ typedef NS_ENUM(NSUInteger, IINKOffscreenGestureAction)
 /**
  * Invoked when a join gesture has been drawn between two portions of a text line,
  * or at the beginning or end of a line.
+ *
+ * To activate join detection in a Raw Content part, add "join" to the
+ * "raw-content.pen.gestures" configuration list.
  *
  * @param editor the offscreen editor.
  * @param gestureStrokeId the id of the gesture stroke.
@@ -74,6 +83,9 @@ typedef NS_ENUM(NSUInteger, IINKOffscreenGestureAction)
  * Invoked when an insert  gesture has been drawn between two portions of a text line,
  * or at the beginning or end of a line.
  *
+ * To activate insert detection in a Raw Content part, add "insert" to the
+ * "raw-content.pen.gestures" configuration list.
+ *
  * @param editor the offscreen editor.
  * @param gestureStrokeId the id of the gesture stroke.
  * @param before the portion of the text line before the insert gesture.
@@ -88,6 +100,9 @@ typedef NS_ENUM(NSUInteger, IINKOffscreenGestureAction)
 /**
  * Invoked when a portion of text has been striked through.
  *
+ * To activate strikethrough detection in a Raw Content part, add "strike-through" to
+ * the "raw-content.pen.gestures" configuration list.
+ *
  * @param editor the offscreen editor.
  * @param gestureStrokeId the id of the gesture stroke.
  * @param itemIds the striked through portion of text.
@@ -99,6 +114,9 @@ typedef NS_ENUM(NSUInteger, IINKOffscreenGestureAction)
 
 /**
  * Invoked when a portion of text has been scratched.
+ *
+ * To activate scratch detection in a Raw Content part, add "scratch-out" to the
+ * "raw-content.pen.gestures" configuration list.
  *
  * @param editor the offscreen editor.
  * @param gestureStrokeId the id of the gesture stroke.

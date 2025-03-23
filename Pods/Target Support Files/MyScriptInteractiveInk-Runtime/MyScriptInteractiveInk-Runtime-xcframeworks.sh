@@ -80,15 +80,6 @@ variant_for_slice()
   "libMyScriptMLOrt.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
-  "libMyScriptPrediction.xcframework/ios-arm64")
-    echo ""
-    ;;
-  "libMyScriptPrediction.xcframework/ios-arm64_x86_64-maccatalyst")
-    echo "maccatalyst"
-    ;;
-  "libMyScriptPrediction.xcframework/ios-arm64_x86_64-simulator")
-    echo "simulator"
-    ;;
   "libMyScriptShape.xcframework/ios-arm64")
     echo ""
     ;;
@@ -192,15 +183,6 @@ archs_for_slice()
     echo "arm64 x86_64"
     ;;
   "libMyScriptMLOrt.xcframework/ios-arm64_x86_64-simulator")
-    echo "arm64 x86_64"
-    ;;
-  "libMyScriptPrediction.xcframework/ios-arm64")
-    echo "arm64"
-    ;;
-  "libMyScriptPrediction.xcframework/ios-arm64_x86_64-maccatalyst")
-    echo "arm64 x86_64"
-    ;;
-  "libMyScriptPrediction.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   "libMyScriptShape.xcframework/ios-arm64")
@@ -328,7 +310,6 @@ install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptGest
 install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptInk.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptMath.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptMLOrt.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
-install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptPrediction.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptShape.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptText.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptEngine.xcframework" "MyScriptInteractiveInk-Runtime" "library" "ios-arm64" "ios-arm64_x86_64-maccatalyst" "ios-arm64_x86_64-simulator"

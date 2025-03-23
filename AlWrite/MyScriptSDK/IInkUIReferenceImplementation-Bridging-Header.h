@@ -3,5 +3,5 @@
 //
 
 #import <iink/IINK.h>
-#import <IInkUIReferenceImplementation.h>
-#import "MyCertificate.h"
+#import <IInkUIReferenceImplementation/IInkUIReferenceImplementation.h>
+#import "../MyScriptCertificate/MyCertificate.h"

@@ -15,6 +15,7 @@
 #import <iink/IINKIImagePainter.h>
 #import <iink/IINKIRenderTarget.h>
 #import <iink/IINKMimeType.h>
+#import <iink/IINKMathSolverController.h>
 #import <iink/IINKParameterSet.h>
 #import <iink/IINKPlaceholderController.h>
 #import <iink/IINKPointerEvent.h>

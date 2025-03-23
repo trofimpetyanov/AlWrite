@@ -108,7 +108,7 @@
  *
  * @param point pointer event coordinates (view coordinates in pixel).
  * @param t pointer event timestamp, in ms since Unix EPOCH.
- * @param f normalized pressure.
+ * @param f normalized pressure, in [0,1].
  * @param error the recipient for the error description object
  *   * IINKErrorInvalidArgument when x or y is not a number.
  *   * IINKErrorInvalidArgument when t exceeds year 9999.
@@ -128,7 +128,7 @@
  *
  * @param point pointer event coordinates (view coordinates in pixel).
  * @param t pointer event timestamp, in ms since Unix EPOCH.
- * @param f normalized pressure.
+ * @param f normalized pressure, in [0,1].
  * @param error the recipient for the error description object
  *   * IINKErrorInvalidArgument when x or y is not a number.
  *   * IINKErrorInvalidArgument when t exceeds year 9999.
@@ -147,7 +147,7 @@
  *
  * @param point pointer event coordinates (view coordinates in pixel).
  * @param t pointer event timestamp, in ms since Unix EPOCH.
- * @param f normalized pressure.
+ * @param f normalized pressure, in [0,1].
  * @param error the recipient for the error description object
  *   * IINKErrorInvalidArgument when x or y is not a number.
  *   * IINKErrorInvalidArgument when t exceeds year 9999.

@@ -6,7 +6,6 @@ ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptGesture.xcframework
 ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptInk.xcframework
 ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptMath.xcframework
 ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptMLOrt.xcframework
-${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptPrediction.xcframework
 ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptShape.xcframework
 ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptText.xcframework
 ${PODS_ROOT}/MyScriptInteractiveInk-Runtime/libMyScriptEngine.xcframework

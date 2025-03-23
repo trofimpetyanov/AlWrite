@@ -8,6 +8,7 @@
 #import <iink/IINKEditorDelegate.h>
 #import <iink/IINKError.h>
 #import <iink/IINKMimeType.h>
+#import <iink/IINKMathSolverController.h>
 #import <iink/IINKParameterSet.h>
 #import <iink/IINKPointerEvent.h>
 #import <iink/text/IINKIFontMetricsProvider.h>
@@ -300,12 +301,18 @@ IINKIndentationLevelsMake(size_t low, size_t high, size_t max)
 @property (nonatomic, readonly, nonnull) IINKToolController *toolController;
 
 /**
- * The placeholder controller associated with this editor, if current part type is
- * "Raw Content", otherwise nil
+ * The `PlaceholderController` associated with this editor.
  *
  * @since 3.2
  */
-@property (nonatomic, readonly, nonnull) IINKPlaceholderController *placeholderController;
+@property (nonatomic, readonly, nullable) IINKPlaceholderController *placeholderController;
+
+/**
+ * The `MathSolverController` associated with this editor.
+ *
+ * @since 4.0
+ */
+@property (nonatomic, readonly, nullable) IINKMathSolverController *mathSolverController;
 
 //==============================================================================
 #pragma mark - Content Manipulation
@@ -379,7 +386,7 @@ IINKIndentationLevelsMake(size_t low, size_t high, size_t max)
  *
  * @param point pointer event coordinates (view coordinates in pixel).
  * @param t pointer event timestamp, in ms since Unix EPOCH.
- * @param f normalized pressure.
+ * @param f normalized pressure, in [0,1].
  * @param type the type of input.
  * @param pointerId the id of the pointer.
  * @param error the recipient for the error description object
@@ -401,11 +408,45 @@ IINKIndentationLevelsMake(size_t low, size_t high, size_t max)
                        NS_SWIFT_NAME(pointerDown(point:timestamp:force:type:pointerId:));
 
 /**
+ * Registers a pointer down event.
+ *
+ * @param point pointer event coordinates (view coordinates in pixel).
+ * @param t pointer event timestamp, in ms since Unix EPOCH.
+ * @param f normalized pressure, in [0,1].
+ * @param tilt the tilt in radians. 0 is perpendicular, Pi/2 if flat on screen.
+ * @param orientation the orientation in radians. 0 is pointing up, -Pi/2 is left, Pi/2 is right, +/-Pi is down.
+ * @param type the type of input.
+ * @param pointerId the id of the pointer.
+ * @param error the recipient for the error description object
+ *   * IINKErrorInvalidArgument when pointerType is invalid.
+ *   * IINKErrorInvalidArgument when x or y is not a number.
+ *   * IINKErrorInvalidArgument when t exceeds year 9999.
+ *   * IINKErrorInvalidArgument when f is not a number or is negative.
+ *   * IINKErrorInvalidArgument when tilt is not a number or is outside 0..Pi/2.
+ *   * IINKErrorInvalidArgument when orientation is not a number or is outside -Pi..Pi.
+ *   * IINKErrorPointerSequence when `pointerDown()` has already been called.
+ *   * IINKErrorRuntime in "Text Document" parts, when no view size is set.
+ * @return the render item identifier of the starting stroke if any, otherwise
+ *   an empty string.
+ *
+ * @since>4.0</since>
+ */
+- (nullable NSString *)pointerDown:(CGPoint)point
+                                at:(int64_t)t
+                             force:(float)f
+                              tilt:(float)tilt
+                       orientation:(float)orientation
+                              type:(IINKPointerType)type
+                         pointerId:(NSInteger)pointerId
+                             error:(NSError * _Nullable * _Nullable)error
+                       NS_SWIFT_NAME(pointerDown(point:timestamp:force:tilt:orientation:type:pointerId:));
+
+/**
  * Registers a pointer move event.
  *
  * @param point pointer event coordinates (view coordinates in pixel).
  * @param t pointer event timestamp, in ms since Unix EPOCH.
- * @param f normalized pressure.
+ * @param f normalized pressure, in [0,1].
  * @param type the type of input.
  * @param pointerId the id of the pointer.
  * @param error the recipient for the error description object
@@ -426,11 +467,44 @@ IINKIndentationLevelsMake(size_t low, size_t high, size_t max)
         NS_SWIFT_NAME(pointerMove(point:timestamp:force:type:pointerId:));
 
 /**
+ * Registers a pointer move event.
+ *
+ * @param point pointer event coordinates (view coordinates in pixel).
+ * @param t pointer event timestamp, in ms since Unix EPOCH.
+ * @param f normalized pressure, in [0,1].
+ * @param tilt the tilt in radians. 0 is perpendicular, Pi/2 if flat on screen.
+ * @param orientation the orientation in radians. 0 is pointing up, -Pi/2 is left, Pi/2 is right, +/-Pi is down.
+ * @param type the type of input.
+ * @param pointerId the id of the pointer.
+ * @param error the recipient for the error description object
+ *   * IINKErrorInvalidArgument when pointerType is invalid.
+ *   * IINKErrorInvalidArgument when x or y is not a number.
+ *   * IINKErrorInvalidArgument when t exceeds year 9999.
+ *   * IINKErrorInvalidArgument when f is not a number or is negative.
+ *   * IINKErrorInvalidArgument when tilt is not a number or is outside 0..Pi/2.
+ *   * IINKErrorInvalidArgument when orientation is not a number or is outside -Pi..Pi.
+ *   * IINKErrorInvalidArgument when stroke has too many points.
+ *   * IINKErrorPointerSequence when `pointerDown()` has not been called before.
+ * @return `YES` on success, otherwise `NO`.
+ *
+ * @since>4.0</since>
+ */
+- (BOOL)pointerMove:(CGPoint)point
+                 at:(int64_t)t
+              force:(float)f
+               tilt:(float)tilt
+        orientation:(float)orientation
+               type:(IINKPointerType)type
+          pointerId:(NSInteger)pointerId
+              error:(NSError * _Nullable * _Nullable)error
+        NS_SWIFT_NAME(pointerMove(point:timestamp:force:tilt:orientation:type:pointerId:));
+
+/**
  * Registers a pointer up event.
  *
  * @param point pointer event coordinates (view coordinates in pixel).
  * @param t pointer event timestamp, in ms since Unix EPOCH.
- * @param f normalized pressure.
+ * @param f normalized pressure, in [0,1].
  * @param type the type of input.
  * @param pointerId the id of the pointer.
  * @param error the recipient for the error description object
@@ -448,6 +522,38 @@ IINKIndentationLevelsMake(size_t low, size_t high, size_t max)
         pointerId:(NSInteger)pointerId
             error:(NSError * _Nullable * _Nullable)error
         NS_SWIFT_NAME(pointerUp(point:timestamp:force:type:pointerId:));
+
+/**
+ * Registers a pointer up event.
+ *
+ * @param point pointer event coordinates (view coordinates in pixel).
+ * @param t pointer event timestamp, in ms since Unix EPOCH.
+ * @param f normalized pressure, in [0,1].
+ * @param tilt the tilt in radians. 0 is perpendicular, Pi/2 if flat on screen.
+ * @param orientation the orientation in radians. 0 is pointing up, -Pi/2 is left, Pi/2 is right, +/-Pi is down.
+ * @param type the type of input.
+ * @param pointerId the id of the pointer.
+ * @param error the recipient for the error description object
+ *   * IINKErrorInvalidArgument when pointerType is invalid.
+ *   * IINKErrorInvalidArgument when x or y is not a number.
+ *   * IINKErrorInvalidArgument when t exceeds year 9999.
+ *   * IINKErrorInvalidArgument when f is not a number or is negative.
+ *   * IINKErrorInvalidArgument when tilt is not a number or is outside 0..Pi/2.
+ *   * IINKErrorInvalidArgument when orientation is not a number or is outside -Pi..Pi.
+ *   * IINKErrorPointerSequence when `pointerDown()` has not been called before.
+ * @return `YES` on success, otherwise `NO`.
+ *
+ * @since>4.0</since>
+ */
+- (BOOL)pointerUp:(CGPoint)point
+               at:(int64_t)t
+            force:(float)f
+             tilt:(float)tilt
+      orientation:(float)orientation
+             type:(IINKPointerType)type
+        pointerId:(NSInteger)pointerId
+            error:(NSError * _Nullable * _Nullable)error
+        NS_SWIFT_NAME(pointerUp(point:timestamp:force:tilt:orientation:type:pointerId:));
 
 /**
  * Cancels an ongoing pointer trace.

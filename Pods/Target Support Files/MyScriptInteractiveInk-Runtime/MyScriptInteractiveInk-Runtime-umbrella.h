@@ -32,6 +32,7 @@
 #import "iink/IINKIContentSelection.h"
 #import "iink/IINKIImagePainter.h"
 #import "iink/IINKIRenderTarget.h"
+#import "iink/IINKMathSolverController.h"
 #import "iink/IINKMimeType.h"
 #import "iink/IINKParameterSet.h"
 #import "iink/IINKPlaceholderController.h"

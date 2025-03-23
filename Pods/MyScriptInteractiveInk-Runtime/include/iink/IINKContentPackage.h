@@ -136,7 +136,7 @@
  * @return the newly created part on success, otherwise `nil`.
  */
 - (nullable IINKContentPart *)createPart:(nonnull NSString *)type
-                               error:(NSError * _Nullable * _Nullable)error
+                                   error:(NSError * _Nullable * _Nullable)error
                               NS_SWIFT_NAME(createPart(with:));
 
 /**

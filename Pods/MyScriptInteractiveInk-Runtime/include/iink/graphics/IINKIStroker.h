@@ -16,8 +16,12 @@ typedef struct _IINKPoint
   float y;
   /** The point timestamp. */
   int64_t t;
-  /** The point normalised pressure. */
+  /** The point normalized pressure, in [0,1]. */
   float f;
+  /** The point tilt in radians. 0 is perpendicular, Pi/2 if flat on screen. */
+  float tilt;
+  /** The point orientation in radians. 0 is pointing up, -Pi/2 is left, Pi/2 is right, +/-Pi is down. */
+  float orientation;
 } IINKPoint;
 
 

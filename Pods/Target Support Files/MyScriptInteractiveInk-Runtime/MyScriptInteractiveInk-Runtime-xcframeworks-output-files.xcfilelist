@@ -5,7 +5,6 @@ ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptGesture
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptInk.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptMath.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptMLOrt.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptPrediction.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptShape.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptText.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/MyScriptInteractiveInk-Runtime/libMyScriptEngine.framework

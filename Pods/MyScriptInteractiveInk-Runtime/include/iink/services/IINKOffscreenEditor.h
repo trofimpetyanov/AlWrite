@@ -113,6 +113,13 @@
  */
 @property (strong, nonatomic, readonly) IINKHistoryManager * _Nullable historyManager;
 
+/**
+ * The `MathSolverController` associated with this offscreen editor.
+ *
+ * @since 4.0
+ */
+@property (nonatomic, readonly, nullable) IINKMathSolverController *mathSolverController;
+
 
 //==============================================================================
 #pragma mark - Content Management

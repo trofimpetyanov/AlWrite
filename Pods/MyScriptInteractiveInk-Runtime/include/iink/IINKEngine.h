@@ -287,8 +287,9 @@ typedef NS_ENUM(NSUInteger, IINKPackageOpenOption)
  *   * IINKErrorRuntime when an I/O operation fails.
  *   * IINKErrorInvalidArgument when a package associated with the same
  *   fileName is already opened.
+ * @return `YES` on success, otherwise `NO`.
  */
-- (void)deletePackage:(nonnull NSString *)fileName
+- (BOOL)deletePackage:(nonnull NSString *)fileName
                 error:(NSError * _Nullable * _Nullable)error;
 
 @end
