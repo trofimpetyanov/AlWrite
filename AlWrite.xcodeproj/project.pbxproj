@@ -3,53 +3,98 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 74;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B08666B68A3C37C7428F8BC /* libPods-AlWrite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9513EF48854031A9A5D2635F /* libPods-AlWrite.a */; };
+		E87DA2922D91F6F500AB7C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DA2902D91F6F500AB7C24 /* LaunchScreen.storyboard */; };
+		E87DA2932D91F6F500AB7C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87DA28E2D91F6F500AB7C24 /* Assets.xcassets */; };
+		E87DA2972D91F6F500AB7C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */; };
+		E87DA2982D91F6F500AB7C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */; };
+		E87DA29D2D91F6F500AB7C24 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2992D91F6F500AB7C24 /* Store.swift */; };
+		E87DA29E2D91F6F500AB7C24 /* ViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA29A2D91F6F500AB7C24 /* ViewStore.swift */; };
+		E87DA2A22D91F6F500AB7C24 /* MyCertificate.c in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A02D91F6F500AB7C24 /* MyCertificate.c */; };
+		E87DA2C42D91F6F500AB7C24 /* AlWriteDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A32D91F6F500AB7C24 /* AlWriteDocument.swift */; };
+		E87DA2C52D91F6F500AB7C24 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */; };
+		E87DA2C62D91F6F500AB7C24 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A92D91F6F500AB7C24 /* DrawingView.swift */; };
+		E87DA2C72D91F6F500AB7C24 /* DrawingDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */; };
+		E87DA2C82D91F6F500AB7C24 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */; };
+		E87DA2C92D91F6F500AB7C24 /* DrawingSceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */; };
+		E87DA2CA2D91F6F500AB7C24 /* DrawingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */; };
+		E87DA2CB2D91F6F500AB7C24 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */; };
+		E87DA2CC2D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B22D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift */; };
+		E87DA2CD2D91F6F500AB7C24 /* RecognitionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B32D91F6F500AB7C24 /* RecognitionProtocols.swift */; };
+		E87DA2CE2D91F6F500AB7C24 /* RecognitionEngineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B52D91F6F500AB7C24 /* RecognitionEngineFactory.swift */; };
+		E87DA2CF2D91F6F500AB7C24 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B72D91F6F500AB7C24 /* FontMetricsProvider.swift */; };
+		E87DA2D02D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B82D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift */; };
+		E87DA2D12D91F6F500AB7C24 /* MyScriptRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B92D91F6F500AB7C24 /* MyScriptRecognitionService.swift */; };
+		E87DA2D22D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BA2D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift */; };
+		E87DA2D32D91F6F500AB7C24 /* RecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BB2D91F6F500AB7C24 /* RecognitionManager.swift */; };
+		E87DA2D42D91F6F500AB7C24 /* RecognitionModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */; };
+		E87DA2D52D91F6F500AB7C24 /* EngineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */; };
+		E87DA2D62D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8333B2CC5B675B7AB30B19DA /* Pods-AlWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.release.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.release.xcconfig"; sourceTree = "<group>"; };
-		9513EF48854031A9A5D2635F /* libPods-AlWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97DC65D5D7326A27F63DC3A1 /* Pods-AlWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.debug.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.debug.xcconfig"; sourceTree = "<group>"; };
+		E87DA26D2D91F6F500AB7C24 /* myscript-iink-recognition-diagram.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-diagram.version.txt"; sourceTree = "<group>"; };
+		E87DA26E2D91F6F500AB7C24 /* myscript-iink-recognition-math.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-math.version.txt"; sourceTree = "<group>"; };
+		E87DA26F2D91F6F500AB7C24 /* myscript-iink-recognition-raw-content.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-raw-content.version.txt"; sourceTree = "<group>"; };
+		E87DA2702D91F6F500AB7C24 /* myscript-iink-recognition-text-en_US.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-text-en_US.version.txt"; sourceTree = "<group>"; };
+		E87DA2722D91F6F500AB7C24 /* diagram.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = diagram.conf; sourceTree = "<group>"; };
+		E87DA2732D91F6F500AB7C24 /* en_US.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = en_US.conf; sourceTree = "<group>"; };
+		E87DA2742D91F6F500AB7C24 /* math.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = math.conf; sourceTree = "<group>"; };
+		E87DA2752D91F6F500AB7C24 /* raw-content.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "raw-content.conf"; sourceTree = "<group>"; };
+		E87DA2772D91F6F500AB7C24 /* diagram.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = diagram.conf; sourceTree = "<group>"; };
+		E87DA2782D91F6F500AB7C24 /* en_US.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = en_US.conf; sourceTree = "<group>"; };
+		E87DA2792D91F6F500AB7C24 /* math.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = math.conf; sourceTree = "<group>"; };
+		E87DA27A2D91F6F500AB7C24 /* raw-content.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "raw-content.conf"; sourceTree = "<group>"; };
+		E87DA27C2D91F6F500AB7C24 /* ank-diagram.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ank-diagram.res"; sourceTree = "<group>"; };
+		E87DA27D2D91F6F500AB7C24 /* ank-raw-content.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ank-raw-content.res"; sourceTree = "<group>"; };
+		E87DA27F2D91F6F500AB7C24 /* en_US-ak-cur.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-cur.res"; sourceTree = "<group>"; };
+		E87DA2802D91F6F500AB7C24 /* en_US-ak-cur.lite.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-cur.lite.res"; sourceTree = "<group>"; };
+		E87DA2812D91F6F500AB7C24 /* en_US-ak-superimposed.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-superimposed.res"; sourceTree = "<group>"; };
+		E87DA2822D91F6F500AB7C24 /* en_US-ak-superimposed.lite.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-superimposed.lite.res"; sourceTree = "<group>"; };
+		E87DA2832D91F6F500AB7C24 /* en_US-lk-text.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-lk-text.res"; sourceTree = "<group>"; };
+		E87DA2842D91F6F500AB7C24 /* en_US-lk-text.lite.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-lk-text.lite.res"; sourceTree = "<group>"; };
+		E87DA2872D91F6F500AB7C24 /* math-ak.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "math-ak.res"; sourceTree = "<group>"; };
+		E87DA2882D91F6F500AB7C24 /* math-grm-standard.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "math-grm-standard.res"; sourceTree = "<group>"; };
+		E87DA28A2D91F6F500AB7C24 /* shk-diagram.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "shk-diagram.res"; sourceTree = "<group>"; };
+		E87DA28E2D91F6F500AB7C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E87DA28F2D91F6F500AB7C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E87DA2992D91F6F500AB7C24 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E87DA29A2D91F6F500AB7C24 /* ViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStore.swift; sourceTree = "<group>"; };
+		E87DA29F2D91F6F500AB7C24 /* MyCertificate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCertificate.h; sourceTree = "<group>"; };
+		E87DA2A02D91F6F500AB7C24 /* MyCertificate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyCertificate.c; sourceTree = "<group>"; };
+		E87DA2A32D91F6F500AB7C24 /* AlWriteDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlWriteDocument.swift; sourceTree = "<group>"; };
+		E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		E87DA2A92D91F6F500AB7C24 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDependenciesContainer.swift; sourceTree = "<group>"; };
+		E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
+		E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSceneBuilder.swift; sourceTree = "<group>"; };
+		E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingStore.swift; sourceTree = "<group>"; };
+		E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		E87DA2B22D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwritingRecognitionDelegate.swift; sourceTree = "<group>"; };
+		E87DA2B32D91F6F500AB7C24 /* RecognitionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionProtocols.swift; sourceTree = "<group>"; };
+		E87DA2B52D91F6F500AB7C24 /* RecognitionEngineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionEngineFactory.swift; sourceTree = "<group>"; };
+		E87DA2B72D91F6F500AB7C24 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
+		E87DA2B82D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptRecognitionEngine.swift; sourceTree = "<group>"; };
+		E87DA2B92D91F6F500AB7C24 /* MyScriptRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptRecognitionService.swift; sourceTree = "<group>"; };
+		E87DA2BA2D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitToMyScriptConverter.swift; sourceTree = "<group>"; };
+		E87DA2BB2D91F6F500AB7C24 /* RecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionManager.swift; sourceTree = "<group>"; };
+		E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionModes.swift; sourceTree = "<group>"; };
+		E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineProvider.swift; sourceTree = "<group>"; };
+		E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptInteractiveInk_Runtime.swift; sourceTree = "<group>"; };
 		E8BB67332D90BEA400A768DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D68FA92D32BE7600FD6971 /* AlWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E87DA1102D91DF1D00AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				/Localized/LaunchScreen.storyboard,
-				Assets.xcassets,
-			);
-			target = E8D68FA82D32BE7600FD6971 /* AlWrite */;
-		};
-		E87DA1152D91DF2000AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				MyCertificate.c,
-			);
-			target = E8D68FA82D32BE7600FD6971 /* AlWrite */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E87DA0D62D91DF1400AB7C24 /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
-		E87DA10D2D91DF1D00AB7C24 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E87DA1102D91DF1D00AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
-		E87DA1132D91DF2000AB7C24 /* MyScriptCertificate */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E87DA1152D91DF2000AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MyScriptCertificate; sourceTree = "<group>"; };
-		E87DA1192D91DF2200AB7C24 /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
-		E87DA11E2D91DF2900AB7C24 /* Application */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Application; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E8D68FA62D32BE7600FD6971 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B08666B68A3C37C7428F8BC /* libPods-AlWrite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,28 +104,295 @@
 		62FE5F92971BAB2EA16D7341 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				97DC65D5D7326A27F63DC3A1 /* Pods-AlWrite.debug.xcconfig */,
-				8333B2CC5B675B7AB30B19DA /* Pods-AlWrite.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		947821E3295052A014F31585 /* Frameworks */ = {
+		E87DA2712D91F6F500AB7C24 /* INFO */ = {
 			isa = PBXGroup;
 			children = (
-				9513EF48854031A9A5D2635F /* libPods-AlWrite.a */,
+				E87DA26D2D91F6F500AB7C24 /* myscript-iink-recognition-diagram.version.txt */,
+				E87DA26E2D91F6F500AB7C24 /* myscript-iink-recognition-math.version.txt */,
+				E87DA26F2D91F6F500AB7C24 /* myscript-iink-recognition-raw-content.version.txt */,
+				E87DA2702D91F6F500AB7C24 /* myscript-iink-recognition-text-en_US.version.txt */,
 			);
-			name = Frameworks;
+			path = INFO;
+			sourceTree = "<group>";
+		};
+		E87DA2762D91F6F500AB7C24 /* conf */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2722D91F6F500AB7C24 /* diagram.conf */,
+				E87DA2732D91F6F500AB7C24 /* en_US.conf */,
+				E87DA2742D91F6F500AB7C24 /* math.conf */,
+				E87DA2752D91F6F500AB7C24 /* raw-content.conf */,
+			);
+			path = conf;
+			sourceTree = "<group>";
+		};
+		E87DA27B2D91F6F500AB7C24 /* conf-lite */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2772D91F6F500AB7C24 /* diagram.conf */,
+				E87DA2782D91F6F500AB7C24 /* en_US.conf */,
+				E87DA2792D91F6F500AB7C24 /* math.conf */,
+				E87DA27A2D91F6F500AB7C24 /* raw-content.conf */,
+			);
+			path = "conf-lite";
+			sourceTree = "<group>";
+		};
+		E87DA27E2D91F6F500AB7C24 /* analyzer */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA27C2D91F6F500AB7C24 /* ank-diagram.res */,
+				E87DA27D2D91F6F500AB7C24 /* ank-raw-content.res */,
+			);
+			path = analyzer;
+			sourceTree = "<group>";
+		};
+		E87DA2852D91F6F500AB7C24 /* en_US */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA27F2D91F6F500AB7C24 /* en_US-ak-cur.res */,
+				E87DA2802D91F6F500AB7C24 /* en_US-ak-cur.lite.res */,
+				E87DA2812D91F6F500AB7C24 /* en_US-ak-superimposed.res */,
+				E87DA2822D91F6F500AB7C24 /* en_US-ak-superimposed.lite.res */,
+				E87DA2832D91F6F500AB7C24 /* en_US-lk-text.res */,
+				E87DA2842D91F6F500AB7C24 /* en_US-lk-text.lite.res */,
+			);
+			path = en_US;
+			sourceTree = "<group>";
+		};
+		E87DA2862D91F6F500AB7C24 /* en_US 2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "en_US 2";
+			sourceTree = "<group>";
+		};
+		E87DA2892D91F6F500AB7C24 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2872D91F6F500AB7C24 /* math-ak.res */,
+				E87DA2882D91F6F500AB7C24 /* math-grm-standard.res */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		E87DA28B2D91F6F500AB7C24 /* shape */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA28A2D91F6F500AB7C24 /* shk-diagram.res */,
+			);
+			path = shape;
+			sourceTree = "<group>";
+		};
+		E87DA28C2D91F6F500AB7C24 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA27E2D91F6F500AB7C24 /* analyzer */,
+				E87DA2852D91F6F500AB7C24 /* en_US */,
+				E87DA2862D91F6F500AB7C24 /* en_US 2 */,
+				E87DA2892D91F6F500AB7C24 /* math */,
+				E87DA28B2D91F6F500AB7C24 /* shape */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		E87DA28D2D91F6F500AB7C24 /* recognition-assets */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2762D91F6F500AB7C24 /* conf */,
+				E87DA27B2D91F6F500AB7C24 /* conf-lite */,
+				E87DA28C2D91F6F500AB7C24 /* resources */,
+			);
+			path = "recognition-assets";
+			sourceTree = "<group>";
+		};
+		E87DA2912D91F6F500AB7C24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2712D91F6F500AB7C24 /* INFO */,
+				E87DA28D2D91F6F500AB7C24 /* recognition-assets */,
+				E87DA28E2D91F6F500AB7C24 /* Assets.xcassets */,
+				E87DA2902D91F6F500AB7C24 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E87DA2962D91F6F500AB7C24 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */,
+				E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E87DA29B2D91F6F500AB7C24 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2992D91F6F500AB7C24 /* Store.swift */,
+				E87DA29A2D91F6F500AB7C24 /* ViewStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		E87DA29C2D91F6F500AB7C24 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA29B2D91F6F500AB7C24 /* Store */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E87DA2A12D91F6F500AB7C24 /* MyScriptCertificate */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA29F2D91F6F500AB7C24 /* MyCertificate.h */,
+				E87DA2A02D91F6F500AB7C24 /* MyCertificate.c */,
+			);
+			path = MyScriptCertificate;
+			sourceTree = "<group>";
+		};
+		E87DA2A42D91F6F500AB7C24 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A32D91F6F500AB7C24 /* AlWriteDocument.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E87DA2A62D91F6F500AB7C24 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E87DA2A72D91F6F500AB7C24 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A42D91F6F500AB7C24 /* Domain */,
+				E87DA2A62D91F6F500AB7C24 /* Scene */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		E87DA2A82D91F6F500AB7C24 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E87DA2AA2D91F6F500AB7C24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A92D91F6F500AB7C24 /* DrawingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E87DA2B02D91F6F500AB7C24 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A82D91F6F500AB7C24 /* Protocol */,
+				E87DA2AA2D91F6F500AB7C24 /* View */,
+				E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */,
+				E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */,
+				E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */,
+				E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */,
+				E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E87DA2B12D91F6F500AB7C24 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B02D91F6F500AB7C24 /* Scene */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		E87DA2B42D91F6F500AB7C24 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B22D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift */,
+				E87DA2B32D91F6F500AB7C24 /* RecognitionProtocols.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E87DA2B62D91F6F500AB7C24 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B52D91F6F500AB7C24 /* RecognitionEngineFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		E87DA2BC2D91F6F500AB7C24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B72D91F6F500AB7C24 /* FontMetricsProvider.swift */,
+				E87DA2B82D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift */,
+				E87DA2B92D91F6F500AB7C24 /* MyScriptRecognitionService.swift */,
+				E87DA2BA2D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift */,
+				E87DA2BB2D91F6F500AB7C24 /* RecognitionManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E87DA2BE2D91F6F500AB7C24 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		E87DA2BF2D91F6F500AB7C24 /* Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B42D91F6F500AB7C24 /* Core */,
+				E87DA2B62D91F6F500AB7C24 /* Factory */,
+				E87DA2BC2D91F6F500AB7C24 /* Services */,
+				E87DA2BE2D91F6F500AB7C24 /* Strategies */,
+			);
+			path = Recognition;
+			sourceTree = "<group>";
+		};
+		E87DA2C22D91F6F500AB7C24 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */,
+				E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E87DA2C32D91F6F500AB7C24 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A72D91F6F500AB7C24 /* Document */,
+				E87DA2B12D91F6F500AB7C24 /* Drawing */,
+				E87DA2BF2D91F6F500AB7C24 /* Recognition */,
+				E87DA2C22D91F6F500AB7C24 /* Utils */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		E8BB67342D90BEA400A768DB /* AlWrite */ = {
 			isa = PBXGroup;
 			children = (
-				E87DA11E2D91DF2900AB7C24 /* Application */,
-				E87DA1192D91DF2200AB7C24 /* Core */,
-				E87DA1132D91DF2000AB7C24 /* MyScriptCertificate */,
-				E87DA10D2D91DF1D00AB7C24 /* Resources */,
-				E87DA0D62D91DF1400AB7C24 /* Sources */,
+				E87DA2962D91F6F500AB7C24 /* Application */,
+				E87DA29C2D91F6F500AB7C24 /* Core */,
+				E87DA2A12D91F6F500AB7C24 /* MyScriptCertificate */,
+				E87DA2912D91F6F500AB7C24 /* Resources */,
+				E87DA2C32D91F6F500AB7C24 /* Sources */,
 				E8BB67332D90BEA400A768DB /* Info.plist */,
 			);
 			path = AlWrite;
@@ -92,7 +404,6 @@
 				E8BB67342D90BEA400A768DB /* AlWrite */,
 				E8D68FAA2D32BE7600FD6971 /* Products */,
 				62FE5F92971BAB2EA16D7341 /* Pods */,
-				947821E3295052A014F31585 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +422,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8D68FBB2D32BE7700FD6971 /* Build configuration list for PBXNativeTarget "AlWrite" */;
 			buildPhases = (
-				47A46518FA4100A32BA84071 /* [CP] Check Pods Manifest.lock */,
 				E8BB65412D90789100A768DB /* ShellScript */,
 				E8D68FA52D32BE7600FD6971 /* Sources */,
 				E8D68FA62D32BE7600FD6971 /* Frameworks */,
@@ -121,11 +431,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E87DA0D62D91DF1400AB7C24 /* Sources */,
-				E87DA1192D91DF2200AB7C24 /* Core */,
-				E87DA11E2D91DF2900AB7C24 /* Application */,
 			);
 			name = AlWrite;
 			productName = AlWrite;
@@ -149,6 +454,7 @@
 				};
 			};
 			buildConfigurationList = E8D68FA42D32BE7600FD6971 /* Build configuration list for PBXProject "AlWrite" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -156,7 +462,6 @@
 				Base,
 			);
 			mainGroup = E8D68FA02D32BE7600FD6971;
-			preferredProjectObjectVersion = 56;
 			productRefGroup = E8D68FAA2D32BE7600FD6971 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -171,34 +476,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87DA2922D91F6F500AB7C24 /* LaunchScreen.storyboard in Resources */,
+				E87DA2932D91F6F500AB7C24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47A46518FA4100A32BA84071 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlWrite-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E87D2D592D91C55A00AB7C24 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -242,15 +527,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E87DA2972D91F6F500AB7C24 /* AppDelegate.swift in Sources */,
+				E87DA2C42D91F6F500AB7C24 /* AlWriteDocument.swift in Sources */,
+				E87DA2C52D91F6F500AB7C24 /* DocumentViewController.swift in Sources */,
+				E87DA2C62D91F6F500AB7C24 /* DrawingView.swift in Sources */,
+				E87DA2C72D91F6F500AB7C24 /* DrawingDependenciesContainer.swift in Sources */,
+				E87DA2C82D91F6F500AB7C24 /* DrawingScene.swift in Sources */,
+				E87DA2C92D91F6F500AB7C24 /* DrawingSceneBuilder.swift in Sources */,
+				E87DA2CA2D91F6F500AB7C24 /* DrawingStore.swift in Sources */,
+				E87DA2CB2D91F6F500AB7C24 /* DrawingViewController.swift in Sources */,
+				E87DA2CC2D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift in Sources */,
+				E87DA2CD2D91F6F500AB7C24 /* RecognitionProtocols.swift in Sources */,
+				E87DA2CE2D91F6F500AB7C24 /* RecognitionEngineFactory.swift in Sources */,
+				E87DA2CF2D91F6F500AB7C24 /* FontMetricsProvider.swift in Sources */,
+				E87DA2D02D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift in Sources */,
+				E87DA2D12D91F6F500AB7C24 /* MyScriptRecognitionService.swift in Sources */,
+				E87DA2D22D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift in Sources */,
+				E87DA2D32D91F6F500AB7C24 /* RecognitionManager.swift in Sources */,
+				E87DA2D42D91F6F500AB7C24 /* RecognitionModes.swift in Sources */,
+				E87DA2D52D91F6F500AB7C24 /* EngineProvider.swift in Sources */,
+				E87DA2D62D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift in Sources */,
+				E87DA29D2D91F6F500AB7C24 /* Store.swift in Sources */,
+				E87DA29E2D91F6F500AB7C24 /* ViewStore.swift in Sources */,
+				E87DA2982D91F6F500AB7C24 /* SceneDelegate.swift in Sources */,
+				E87DA2A22D91F6F500AB7C24 /* MyCertificate.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E87DA2902D91F6F500AB7C24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E87DA28F2D91F6F500AB7C24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E8D68FBC2D32BE7700FD6971 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97DC65D5D7326A27F63DC3A1 /* Pods-AlWrite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,7 +609,6 @@
 		};
 		E8D68FBD2D32BE7700FD6971 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8333B2CC5B675B7AB30B19DA /* Pods-AlWrite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
