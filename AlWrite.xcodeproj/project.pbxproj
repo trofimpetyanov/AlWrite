@@ -3,205 +3,96 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 74;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48788A85822464A4145DBBEF /* libPods-AlWrite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D81959886D989577728CC549 /* libPods-AlWrite.a */; };
-		E8BB652F2D90773D00A768DB /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65202D90773D00A768DB /* DocumentViewController.swift */; };
-		E8BB65302D90773D00A768DB /* DrawingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65282D90773D00A768DB /* DrawingStore.swift */; };
-		E8BB65312D90773D00A768DB /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65232D90773D00A768DB /* DrawingView.swift */; };
-		E8BB65322D90773D00A768DB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65152D90773D00A768DB /* Store.swift */; };
-		E8BB65332D90773D00A768DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65122D90773D00A768DB /* AppDelegate.swift */; };
-		E8BB65342D90773D00A768DB /* DrawingSceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65272D90773D00A768DB /* DrawingSceneBuilder.swift */; };
-		E8BB65352D90773D00A768DB /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65292D90773D00A768DB /* DrawingViewController.swift */; };
-		E8BB65362D90773D00A768DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65132D90773D00A768DB /* SceneDelegate.swift */; };
-		E8BB65372D90773D00A768DB /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65262D90773D00A768DB /* DrawingScene.swift */; };
-		E8BB65382D90773D00A768DB /* DrawingDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65252D90773D00A768DB /* DrawingDependenciesContainer.swift */; };
-		E8BB65392D90773D00A768DB /* ViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB65162D90773D00A768DB /* ViewStore.swift */; };
-		E8BB653A2D90773D00A768DB /* EngineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB652C2D90773D00A768DB /* EngineProvider.swift */; };
-		E8BB653B2D90773D00A768DB /* AlWriteDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB651E2D90773D00A768DB /* AlWriteDocument.swift */; };
-		E8BB653C2D90773D00A768DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8BB651A2D90773D00A768DB /* Assets.xcassets */; };
-		E8BB653D2D90773D00A768DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8BB651C2D90773D00A768DB /* LaunchScreen.storyboard */; };
-		E8BB65402D90775900A768DB /* MyCertificate.c in Sources */ = {isa = PBXBuildFile; fileRef = E8BB653F2D90775900A768DB /* MyCertificate.c */; };
+		4B08666B68A3C37C7428F8BC /* libPods-AlWrite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9513EF48854031A9A5D2635F /* libPods-AlWrite.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09FCEC16E30F685E3BFEC03A /* Pods-AlWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.release.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.release.xcconfig"; sourceTree = "<group>"; };
-		3EF3E087C908554DAA08E676 /* Pods-AlWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.debug.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.debug.xcconfig"; sourceTree = "<group>"; };
-		D81959886D989577728CC549 /* libPods-AlWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8BB65122D90773D00A768DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8BB65132D90773D00A768DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E8BB65152D90773D00A768DB /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		E8BB65162D90773D00A768DB /* ViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStore.swift; sourceTree = "<group>"; };
-		E8BB651A2D90773D00A768DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E8BB651B2D90773D00A768DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E8BB651E2D90773D00A768DB /* AlWriteDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlWriteDocument.swift; sourceTree = "<group>"; };
-		E8BB65202D90773D00A768DB /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		E8BB65232D90773D00A768DB /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
-		E8BB65252D90773D00A768DB /* DrawingDependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDependenciesContainer.swift; sourceTree = "<group>"; };
-		E8BB65262D90773D00A768DB /* DrawingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
-		E8BB65272D90773D00A768DB /* DrawingSceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSceneBuilder.swift; sourceTree = "<group>"; };
-		E8BB65282D90773D00A768DB /* DrawingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingStore.swift; sourceTree = "<group>"; };
-		E8BB65292D90773D00A768DB /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
-		E8BB652C2D90773D00A768DB /* EngineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineProvider.swift; sourceTree = "<group>"; };
-		E8BB653E2D90775900A768DB /* MyCertificate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCertificate.h; sourceTree = "<group>"; };
-		E8BB653F2D90775900A768DB /* MyCertificate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyCertificate.c; sourceTree = "<group>"; };
+		8333B2CC5B675B7AB30B19DA /* Pods-AlWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.release.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.release.xcconfig"; sourceTree = "<group>"; };
+		9513EF48854031A9A5D2635F /* libPods-AlWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DC65D5D7326A27F63DC3A1 /* Pods-AlWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.debug.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.debug.xcconfig"; sourceTree = "<group>"; };
+		E8BB67332D90BEA400A768DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D68FA92D32BE7600FD6971 /* AlWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		E87DA1102D91DF1D00AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				/Localized/LaunchScreen.storyboard,
+				Assets.xcassets,
+			);
+			target = E8D68FA82D32BE7600FD6971 /* AlWrite */;
+		};
+		E87DA1152D91DF2000AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MyCertificate.c,
+			);
+			target = E8D68FA82D32BE7600FD6971 /* AlWrite */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E87DA0D62D91DF1400AB7C24 /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
+		E87DA10D2D91DF1D00AB7C24 /* Resources */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E87DA1102D91DF1D00AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Resources; sourceTree = "<group>"; };
+		E87DA1132D91DF2000AB7C24 /* MyScriptCertificate */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E87DA1152D91DF2000AB7C24 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MyScriptCertificate; sourceTree = "<group>"; };
+		E87DA1192D91DF2200AB7C24 /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
+		E87DA11E2D91DF2900AB7C24 /* Application */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Application; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E8D68FA62D32BE7600FD6971 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48788A85822464A4145DBBEF /* libPods-AlWrite.a in Frameworks */,
+				4B08666B68A3C37C7428F8BC /* libPods-AlWrite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16CE4DB41704BE2B01193DD8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D81959886D989577728CC549 /* libPods-AlWrite.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		62FE5F92971BAB2EA16D7341 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3EF3E087C908554DAA08E676 /* Pods-AlWrite.debug.xcconfig */,
-				09FCEC16E30F685E3BFEC03A /* Pods-AlWrite.release.xcconfig */,
+				97DC65D5D7326A27F63DC3A1 /* Pods-AlWrite.debug.xcconfig */,
+				8333B2CC5B675B7AB30B19DA /* Pods-AlWrite.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E8BB65142D90773D00A768DB /* Application */ = {
+		947821E3295052A014F31585 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E8BB65122D90773D00A768DB /* AppDelegate.swift */,
-				E8BB65132D90773D00A768DB /* SceneDelegate.swift */,
+				9513EF48854031A9A5D2635F /* libPods-AlWrite.a */,
 			);
-			path = Application;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E8BB65172D90773D00A768DB /* Store */ = {
+		E8BB67342D90BEA400A768DB /* AlWrite */ = {
 			isa = PBXGroup;
 			children = (
-				E8BB65152D90773D00A768DB /* Store.swift */,
-				E8BB65162D90773D00A768DB /* ViewStore.swift */,
+				E87DA11E2D91DF2900AB7C24 /* Application */,
+				E87DA1192D91DF2200AB7C24 /* Core */,
+				E87DA1132D91DF2000AB7C24 /* MyScriptCertificate */,
+				E87DA10D2D91DF1D00AB7C24 /* Resources */,
+				E87DA0D62D91DF1400AB7C24 /* Sources */,
+				E8BB67332D90BEA400A768DB /* Info.plist */,
 			);
-			path = Store;
-			sourceTree = "<group>";
-		};
-		E8BB65182D90773D00A768DB /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB65172D90773D00A768DB /* Store */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		E8BB65192D90773D00A768DB /* MyScriptCertificate */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB653E2D90775900A768DB /* MyCertificate.h */,
-				E8BB653F2D90775900A768DB /* MyCertificate.c */,
-			);
-			path = MyScriptCertificate;
-			sourceTree = "<group>";
-		};
-		E8BB651D2D90773D00A768DB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB651A2D90773D00A768DB /* Assets.xcassets */,
-				E8BB651C2D90773D00A768DB /* LaunchScreen.storyboard */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		E8BB651F2D90773D00A768DB /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB651E2D90773D00A768DB /* AlWriteDocument.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		E8BB65212D90773D00A768DB /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB65202D90773D00A768DB /* DocumentViewController.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		E8BB65222D90773D00A768DB /* Document */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB651F2D90773D00A768DB /* Domain */,
-				E8BB65212D90773D00A768DB /* Scene */,
-			);
-			path = Document;
-			sourceTree = "<group>";
-		};
-		E8BB65242D90773D00A768DB /* View */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB65232D90773D00A768DB /* DrawingView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		E8BB652A2D90773D00A768DB /* Scene */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB65242D90773D00A768DB /* View */,
-				E8BB65252D90773D00A768DB /* DrawingDependenciesContainer.swift */,
-				E8BB65262D90773D00A768DB /* DrawingScene.swift */,
-				E8BB65272D90773D00A768DB /* DrawingSceneBuilder.swift */,
-				E8BB65282D90773D00A768DB /* DrawingStore.swift */,
-				E8BB65292D90773D00A768DB /* DrawingViewController.swift */,
-			);
-			path = Scene;
-			sourceTree = "<group>";
-		};
-		E8BB652B2D90773D00A768DB /* Drawing */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB652A2D90773D00A768DB /* Scene */,
-			);
-			path = Drawing;
-			sourceTree = "<group>";
-		};
-		E8BB652D2D90773D00A768DB /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB652C2D90773D00A768DB /* EngineProvider.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		E8BB652E2D90773D00A768DB /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB65222D90773D00A768DB /* Document */,
-				E8BB652B2D90773D00A768DB /* Drawing */,
-				E8BB652D2D90773D00A768DB /* Utils */,
-			);
-			path = Sources;
+			path = AlWrite;
 			sourceTree = "<group>";
 		};
 		E8D68FA02D32BE7600FD6971 = {
 			isa = PBXGroup;
 			children = (
-				E8D68FAB2D32BE7600FD6971 /* AlWrite */,
+				E8BB67342D90BEA400A768DB /* AlWrite */,
 				E8D68FAA2D32BE7600FD6971 /* Products */,
 				62FE5F92971BAB2EA16D7341 /* Pods */,
-				16CE4DB41704BE2B01193DD8 /* Frameworks */,
+				947821E3295052A014F31585 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,18 +104,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8D68FAB2D32BE7600FD6971 /* AlWrite */ = {
-			isa = PBXGroup;
-			children = (
-				E8BB65142D90773D00A768DB /* Application */,
-				E8BB65182D90773D00A768DB /* Core */,
-				E8BB65192D90773D00A768DB /* MyScriptCertificate */,
-				E8BB651D2D90773D00A768DB /* Resources */,
-				E8BB652E2D90773D00A768DB /* Sources */,
-			);
-			path = AlWrite;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,15 +111,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8D68FBB2D32BE7700FD6971 /* Build configuration list for PBXNativeTarget "AlWrite" */;
 			buildPhases = (
-				9B8ABAB03F8B213F81F2960D /* [CP] Check Pods Manifest.lock */,
+				47A46518FA4100A32BA84071 /* [CP] Check Pods Manifest.lock */,
 				E8BB65412D90789100A768DB /* ShellScript */,
 				E8D68FA52D32BE7600FD6971 /* Sources */,
 				E8D68FA62D32BE7600FD6971 /* Frameworks */,
 				E8D68FA72D32BE7600FD6971 /* Resources */,
+				E87D2D592D91C55A00AB7C24 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				E87DA0D62D91DF1400AB7C24 /* Sources */,
+				E87DA1192D91DF2200AB7C24 /* Core */,
+				E87DA11E2D91DF2900AB7C24 /* Application */,
 			);
 			name = AlWrite;
 			productName = AlWrite;
@@ -264,7 +149,6 @@
 				};
 			};
 			buildConfigurationList = E8D68FA42D32BE7600FD6971 /* Build configuration list for PBXProject "AlWrite" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -272,6 +156,7 @@
 				Base,
 			);
 			mainGroup = E8D68FA02D32BE7600FD6971;
+			preferredProjectObjectVersion = 56;
 			productRefGroup = E8D68FAA2D32BE7600FD6971 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,15 +171,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8BB653C2D90773D00A768DB /* Assets.xcassets in Resources */,
-				E8BB653D2D90773D00A768DB /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9B8ABAB03F8B213F81F2960D /* [CP] Check Pods Manifest.lock */ = {
+		47A46518FA4100A32BA84071 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -315,6 +198,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E87D2D592D91C55A00AB7C24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Script to copy recognition assets to the app bundle\nRECOGNITION_ASSETS_DIR=\"${SRCROOT}/AlWrite/Resources/recognition-assets\"\nTARGET_DIR=\"${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/recognition-assets\"\n\n# Check if recognition assets exist\nif [ -d \"$RECOGNITION_ASSETS_DIR\" ]; then\n    echo \"✅ Found recognition assets at: $RECOGNITION_ASSETS_DIR\"\n    \n    # Create target directory if it doesn't exist\n    mkdir -p \"$TARGET_DIR\"\n    \n    # Copy recognition assets to the app bundle\n    cp -R \"$RECOGNITION_ASSETS_DIR\"/* \"$TARGET_DIR\"\n    \n    echo \"✅ Successfully copied recognition assets to: $TARGET_DIR\"\nelse\n    echo \"❌ Recognition assets not found at: $RECOGNITION_ASSETS_DIR\"\n    exit 1\nfi\n";
 		};
 		E8BB65412D90789100A768DB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -341,40 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8BB652F2D90773D00A768DB /* DocumentViewController.swift in Sources */,
-				E8BB65302D90773D00A768DB /* DrawingStore.swift in Sources */,
-				E8BB65312D90773D00A768DB /* DrawingView.swift in Sources */,
-				E8BB65322D90773D00A768DB /* Store.swift in Sources */,
-				E8BB65402D90775900A768DB /* MyCertificate.c in Sources */,
-				E8BB65332D90773D00A768DB /* AppDelegate.swift in Sources */,
-				E8BB65342D90773D00A768DB /* DrawingSceneBuilder.swift in Sources */,
-				E8BB65352D90773D00A768DB /* DrawingViewController.swift in Sources */,
-				E8BB65362D90773D00A768DB /* SceneDelegate.swift in Sources */,
-				E8BB65372D90773D00A768DB /* DrawingScene.swift in Sources */,
-				E8BB65382D90773D00A768DB /* DrawingDependenciesContainer.swift in Sources */,
-				E8BB65392D90773D00A768DB /* ViewStore.swift in Sources */,
-				E8BB653A2D90773D00A768DB /* EngineProvider.swift in Sources */,
-				E8BB653B2D90773D00A768DB /* AlWriteDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		E8BB651C2D90773D00A768DB /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E8BB651B2D90773D00A768DB /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		E8D68FBC2D32BE7700FD6971 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EF3E087C908554DAA08E676 /* Pods-AlWrite.debug.xcconfig */;
+			baseConfigurationReference = 97DC65D5D7326A27F63DC3A1 /* Pods-AlWrite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -414,7 +290,7 @@
 		};
 		E8D68FBD2D32BE7700FD6971 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09FCEC16E30F685E3BFEC03A /* Pods-AlWrite.release.xcconfig */;
+			baseConfigurationReference = 8333B2CC5B675B7AB30B19DA /* Pods-AlWrite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

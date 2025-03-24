@@ -1,5 +1,5 @@
 import Foundation
 
-final class DrawingDependenciesContainer {
-
+struct DrawingDependenciesContainer {
+    let engineFactory: RecognitionEngineFactory
 }

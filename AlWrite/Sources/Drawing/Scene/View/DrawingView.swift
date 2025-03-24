@@ -52,6 +52,10 @@ class DrawingView: UIView {
         canvasView.drawing = drawing
     }
 
+    func getDirectCanvasDrawing() -> PKDrawing {
+        return canvasView.drawing
+    }
+
     // MARK: Private Methods
     private func setupCanvas() {
         addSubview(canvasView)
@@ -112,7 +116,6 @@ class DrawingView: UIView {
 extension DrawingView: PKCanvasViewDelegate {
     func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
         updateContentSizeForDrawing()
-        
         onUpdateDrawing?(canvasView.drawing)
     }
 }

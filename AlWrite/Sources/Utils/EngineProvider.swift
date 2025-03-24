@@ -20,14 +20,72 @@ class EngineProvider {
             return nil
         }
 
-        let configurationPath = Bundle.main.bundlePath.appending("/recognition-assets/conf")
+        // Get the correct path to recognition assets in the bundle
+        print("📂 Bundle path: \(Bundle.main.bundlePath)")
+        
+        // First try to find recognition assets in the app bundle's Resources directory
+        let bundleResourcePath = Bundle.main.resourcePath ?? Bundle.main.bundlePath
+        let fileManager = FileManager.default
+        
+        // Potential paths for the recognition assets
+        let possiblePaths = [
+            bundleResourcePath + "/Resources/recognition-assets/conf",
+            bundleResourcePath + "/recognition-assets/conf",
+            Bundle.main.bundlePath + "/recognition-assets/conf"
+        ]
+        
+        var configurationPath = ""
+        
+        // Check each potential path
+        for path in possiblePaths {
+            if fileManager.fileExists(atPath: path) {
+                print("✅ Recognition assets found at: \(path)")
+                configurationPath = path
+                break
+            }
+        }
+        
+        // If still not found, search deeper and implement fallback
+        if configurationPath.isEmpty {
+            print("❌ Recognition assets not found at expected locations")
+            
+            // Search for recognition-assets in the bundle
+            print("🔍 Searching for recognition-assets in bundle...")
+            
+            // Check bundle contents for clues
+            do {
+                let bundleContents = try fileManager.contentsOfDirectory(atPath: Bundle.main.bundlePath)
+                print("📂 Bundle contents: \(bundleContents)")
+                
+                // Check if "recognition-assets" exists in the bundle
+                if bundleContents.contains("recognition-assets") {
+                    configurationPath = Bundle.main.bundlePath + "/recognition-assets/conf"
+                }
+            } catch {
+                print("❌ Failed to search bundle: \(error.localizedDescription)")
+            }
+            
+            // If still not found, use a fallback path
+            if configurationPath.isEmpty {
+                configurationPath = Bundle.main.bundlePath + "/recognition-assets/conf"
+                print("⚠️ Using fallback path: \(configurationPath)")
+            }
+        }
+        
         do {
+            // Create all directories in the path if they don't exist
+            if !configurationPath.isEmpty && !fileManager.fileExists(atPath: configurationPath) {
+                try fileManager.createDirectory(atPath: configurationPath, withIntermediateDirectories: true)
+                print("📁 Created missing directories for: \(configurationPath)")
+            }
+            
             try engine.configuration.set(
                 stringArray: [configurationPath],
                 forKey: "configuration-manager.search-path"
             )
+            print("✅ Set configuration search path to: \(configurationPath)")
         } catch {
-            print("Should not happen, please check your resources assets : ", error.localizedDescription)
+            print("❌ Failed to set configuration search path: \(error.localizedDescription)")
             return nil
         }
 

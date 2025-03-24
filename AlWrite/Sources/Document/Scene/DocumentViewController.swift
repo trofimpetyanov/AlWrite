@@ -28,7 +28,7 @@ class DocumentViewController: UIDocumentViewController {
     
     // MARK: - Setup
     private func setupDrawingViewController() {
-        let dependenciesContainer = DrawingDependenciesContainer()
+        let dependenciesContainer = DrawingDependenciesContainer(engineFactory: RecognitionEngineFactory())
         let drawingViewController = DrawingSceneBuilder().build(
             dependenciesContainer: dependenciesContainer
         )
@@ -96,5 +96,32 @@ extension DocumentViewController: DrawingViewControllerDelegate {
         didToggleToolPicker isVisible: Bool
     ) {
         updateToolPickerButton(isVisible: isVisible)
+    }
+    
+    func drawingViewController(
+        _ viewController: DrawingViewController,
+        didRecognizeText text: String
+    ) {
+        let alertController = UIAlertController(
+            title: "Распознанный текст",
+            message: text,
+            preferredStyle: .alert
+        )
+        
+        alertController.addAction(UIAlertAction(
+            title: "Копировать",
+            style: .default,
+            handler: { _ in
+                UIPasteboard.general.string = text
+            }
+        ))
+        
+        alertController.addAction(UIAlertAction(
+            title: "OK",
+            style: .default,
+            handler: nil
+        ))
+        
+        present(alertController, animated: true)
     }
 }
