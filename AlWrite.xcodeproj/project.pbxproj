@@ -34,6 +34,16 @@
 		E87DA2D42D91F6F500AB7C24 /* RecognitionModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */; };
 		E87DA2D52D91F6F500AB7C24 /* EngineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */; };
 		E87DA2D62D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */; };
+		E8BB51352D92E48900B7966B /* ViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB51322D92E48900B7966B /* ViewerViewController.swift */; };
+		E8BB51362D92E48900B7966B /* ViewerSceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB51312D92E48900B7966B /* ViewerSceneBuilder.swift */; };
+		E8BB51372D92E48900B7966B /* ViewerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB512F2D92E48900B7966B /* ViewerView.swift */; };
+		E8BB51382D92E48900B7966B /* ViewerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB512B2D92E48900B7966B /* ViewerStore.swift */; };
+		E8BB51392D92E48900B7966B /* ViewerStoreDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB512D2D92E48900B7966B /* ViewerStoreDelegate.swift */; };
+		E8BB513D2D92E63500B7966B /* ViewerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB513C2D92E63500B7966B /* ViewerScene.swift */; };
+		E8BB51412D92E98100B7966B /* ViewerDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BB51402D92E98100B7966B /* ViewerDependenciesContainer.swift */; };
+		E8BBC33A2D92F46800B7966B /* DependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBC3392D92F46800B7966B /* DependenciesContainer.swift */; };
+		E8BBC33E2D92F47100B7966B /* DocumentRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBC33C2D92F47100B7966B /* DocumentRouting.swift */; };
+		E8BBC33F2D92F47100B7966B /* ApplicationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8BBC33B2D92F47100B7966B /* ApplicationRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +100,17 @@
 		E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionModes.swift; sourceTree = "<group>"; };
 		E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineProvider.swift; sourceTree = "<group>"; };
 		E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptInteractiveInk_Runtime.swift; sourceTree = "<group>"; };
+		E8BB512B2D92E48900B7966B /* ViewerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerStore.swift; sourceTree = "<group>"; };
+		E8BB512D2D92E48900B7966B /* ViewerStoreDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerStoreDelegate.swift; sourceTree = "<group>"; };
+		E8BB512F2D92E48900B7966B /* ViewerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerView.swift; sourceTree = "<group>"; };
+		E8BB51312D92E48900B7966B /* ViewerSceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerSceneBuilder.swift; sourceTree = "<group>"; };
+		E8BB51322D92E48900B7966B /* ViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerViewController.swift; sourceTree = "<group>"; };
+		E8BB513C2D92E63500B7966B /* ViewerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerScene.swift; sourceTree = "<group>"; };
+		E8BB51402D92E98100B7966B /* ViewerDependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerDependenciesContainer.swift; sourceTree = "<group>"; };
 		E8BB67332D90BEA400A768DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8BBC3392D92F46800B7966B /* DependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesContainer.swift; sourceTree = "<group>"; };
+		E8BBC33B2D92F47100B7966B /* ApplicationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRouter.swift; sourceTree = "<group>"; };
+		E8BBC33C2D92F47100B7966B /* DocumentRouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentRouting.swift; sourceTree = "<group>"; };
 		E8D68FA92D32BE7600FD6971 /* AlWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -238,8 +258,10 @@
 		E87DA2962D91F6F500AB7C24 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E8BBC33B2D92F47100B7966B /* ApplicationRouter.swift */,
 				E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */,
 				E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */,
+				E8BBC3392D92F46800B7966B /* DependenciesContainer.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -256,6 +278,7 @@
 		E87DA29C2D91F6F500AB7C24 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E8BBC33D2D92F47100B7966B /* Router */,
 				E87DA29B2D91F6F500AB7C24 /* Store */,
 			);
 			path = Core;
@@ -282,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */,
+				E8BBC33C2D92F47100B7966B /* DocumentRouting.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -315,11 +339,11 @@
 			children = (
 				E87DA2A82D91F6F500AB7C24 /* Protocol */,
 				E87DA2AA2D91F6F500AB7C24 /* View */,
-				E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */,
+				E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */,
 				E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */,
 				E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */,
-				E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */,
 				E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */,
+				E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -394,10 +418,49 @@
 			children = (
 				E87DA2A72D91F6F500AB7C24 /* Document */,
 				E87DA2B12D91F6F500AB7C24 /* Drawing */,
+				E8BB51342D92E48900B7966B /* Viewer */,
 				E87DA2BF2D91F6F500AB7C24 /* Recognition */,
 				E87DA2C22D91F6F500AB7C24 /* Utils */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		E8BB512E2D92E48900B7966B /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E8BB512D2D92E48900B7966B /* ViewerStoreDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E8BB51302D92E48900B7966B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E8BB512F2D92E48900B7966B /* ViewerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E8BB51332D92E48900B7966B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E8BB512E2D92E48900B7966B /* Protocol */,
+				E8BB51302D92E48900B7966B /* View */,
+				E8BB512B2D92E48900B7966B /* ViewerStore.swift */,
+				E8BB513C2D92E63500B7966B /* ViewerScene.swift */,
+				E8BB51312D92E48900B7966B /* ViewerSceneBuilder.swift */,
+				E8BB51322D92E48900B7966B /* ViewerViewController.swift */,
+				E8BB51402D92E98100B7966B /* ViewerDependenciesContainer.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E8BB51342D92E48900B7966B /* Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				E8BB51332D92E48900B7966B /* Scene */,
+			);
+			path = Viewer;
 			sourceTree = "<group>";
 		};
 		E8BB67342D90BEA400A768DB /* AlWrite */ = {
@@ -411,6 +474,13 @@
 				E8BB67332D90BEA400A768DB /* Info.plist */,
 			);
 			path = AlWrite;
+			sourceTree = "<group>";
+		};
+		E8BBC33D2D92F47100B7966B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E8D68FA02D32BE7600FD6971 = {
@@ -575,6 +645,13 @@
 				E87DA2C92D91F6F500AB7C24 /* DrawingSceneBuilder.swift in Sources */,
 				E87DA2CA2D91F6F500AB7C24 /* DrawingStore.swift in Sources */,
 				E87DA2CB2D91F6F500AB7C24 /* DrawingViewController.swift in Sources */,
+				E8BB51352D92E48900B7966B /* ViewerViewController.swift in Sources */,
+				E8BB51362D92E48900B7966B /* ViewerSceneBuilder.swift in Sources */,
+				E8BB51372D92E48900B7966B /* ViewerView.swift in Sources */,
+				E8BB51382D92E48900B7966B /* ViewerStore.swift in Sources */,
+				E8BB51392D92E48900B7966B /* ViewerStoreDelegate.swift in Sources */,
+				E8BBC33E2D92F47100B7966B /* DocumentRouting.swift in Sources */,
+				E8BBC33F2D92F47100B7966B /* ApplicationRouter.swift in Sources */,
 				E87DA2CC2D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift in Sources */,
 				E87DA2CD2D91F6F500AB7C24 /* RecognitionProtocols.swift in Sources */,
 				E87DA2CE2D91F6F500AB7C24 /* RecognitionEngineFactory.swift in Sources */,
@@ -583,6 +660,7 @@
 				E87DA2D12D91F6F500AB7C24 /* MyScriptRecognitionService.swift in Sources */,
 				E87DA2D22D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift in Sources */,
 				E87DA2D32D91F6F500AB7C24 /* RecognitionManager.swift in Sources */,
+				E8BB51412D92E98100B7966B /* ViewerDependenciesContainer.swift in Sources */,
 				E87DA2D42D91F6F500AB7C24 /* RecognitionModes.swift in Sources */,
 				E87DA2D52D91F6F500AB7C24 /* EngineProvider.swift in Sources */,
 				E87DA2D62D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift in Sources */,
@@ -590,6 +668,8 @@
 				E87DA29E2D91F6F500AB7C24 /* ViewStore.swift in Sources */,
 				E87DA2982D91F6F500AB7C24 /* SceneDelegate.swift in Sources */,
 				E87DA2A22D91F6F500AB7C24 /* MyCertificate.c in Sources */,
+				E8BB513D2D92E63500B7966B /* ViewerScene.swift in Sources */,
+				E8BBC33A2D92F46800B7966B /* DependenciesContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

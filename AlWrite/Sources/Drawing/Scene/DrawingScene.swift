@@ -12,12 +12,6 @@ enum DrawingEvent {
     case toggleToolPicker
     case switchRecognitionMode(StandardRecognitionMode)
     case recognizeDrawing(PKDrawing?)
-    case clearDrawing
-}
-
-@MainActor
-protocol DrawingStoreDelegate: AnyObject {
-    func didCompleteRecognition(result: Result<String, Error>)
 }
 
 typealias DrawingViewState = DrawingState

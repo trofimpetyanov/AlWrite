@@ -2,6 +2,11 @@ import Foundation
 import PencilKit
 
 @MainActor
+protocol DrawingStoreDelegate: AnyObject {
+    func didCompleteRecognition(result: Result<String, Error>)
+}
+
+@MainActor
 final class DrawingStore: Store {
     @Published private(set) var state: DrawingState
     var statePublisher: Published<DrawingState>.Publisher { $state }
@@ -39,10 +44,6 @@ final class DrawingStore: Store {
             }
             
             recognitionManager.processDrawing(drawingToProcess)
-            
-        case .clearDrawing:
-            state.drawing = PKDrawing()
-            recognitionManager.clear()
         }
     }
 }

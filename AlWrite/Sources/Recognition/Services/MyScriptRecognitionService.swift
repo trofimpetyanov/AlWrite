@@ -11,6 +11,7 @@ final class MyScriptRecognitionService: RecognitionService {
     private var toolController: IINKToolController?
     private let fontMetricsProvider = SimpleFontMetricsProvider()
     private let mode: RecognitionMode
+    private static var packageCounter = 0
     
     init(engine: IINKEngine, mode: RecognitionMode) {
         self.engine = engine
@@ -20,7 +21,10 @@ final class MyScriptRecognitionService: RecognitionService {
     
     private func setupEditor() {
         do {
-            let content = try engine.createPackage(mode.description)
+            let uniquePackageName = "\(mode.description)_\(Self.packageCounter)"
+            Self.packageCounter += 1
+            
+            let content = try engine.createPackage(uniquePackageName)
             let part = try content.createPart(with: mode.partType)
             self.part = part
             
@@ -33,6 +37,41 @@ final class MyScriptRecognitionService: RecognitionService {
                 try editor.set(part: part)
             }
         } catch {
+            retryEditorSetup()
+        }
+    }
+    
+    private func retryEditorSetup() {
+        do {
+            self.renderer = try engine.createRenderer(dpiX: 96, dpiY: 96, target: nil)
+            self.toolController = engine.createToolController()
+            
+            if let renderer = self.renderer, let editor = engine.createEditor(renderer: renderer, toolController: self.toolController) {
+                self.editor = editor
+                editor.set(fontMetricsProvider: fontMetricsProvider)
+                
+                let retryPackageName = "NewPackage_\(UUID().uuidString)"
+                let content = try engine.createPackage(retryPackageName)
+                let part = try content.createPart(with: mode.partType)
+                try editor.set(part: part)
+                self.part = part
+            }
+        } catch {
+            print("Cannot initialize editor: \(error)")
+        }
+    }
+    
+    private func resetEditor() {
+        if let editor = editor {
+            for i in 0..<10 {
+                try? editor.pointerCancel(i)
+            }
+        }
+        
+        do {
+            try editor?.clear()
+        } catch {
+            setupEditor()
         }
     }
     
@@ -48,6 +87,8 @@ final class MyScriptRecognitionService: RecognitionService {
         }
         
         return try await Task.detached(priority: .userInitiated) { [self] in
+            resetEditor()
+            
             try editor.clear()
             try PencilKitToMyScriptConverter.convertDrawing(drawing, to: editor)
             
@@ -86,10 +127,7 @@ final class MyScriptRecognitionService: RecognitionService {
     }
     
     func clear() {
-        do {
-            try editor?.clear()
-            lastDrawing = nil
-        } catch {
-        }
+        resetEditor()
+        lastDrawing = nil
     }
 }
