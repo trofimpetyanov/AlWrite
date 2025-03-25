@@ -1,6 +1,0 @@
-module MyScriptInteractiveInk_Runtime {
-  umbrella header "MyScriptInteractiveInk-Runtime-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,84 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		48788A85822464A4145DBBEF /* libPods-AlWrite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D81959886D989577728CC549 /* libPods-AlWrite.a */; };
-		E80303B32D3EAD50003EE464 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80303B22D3EAD50003EE464 /* SceneDelegate.swift */; };
-		E80303B42D3EAD50003EE464 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80303B02D3EAD50003EE464 /* DrawingViewController.swift */; };
-		E80303B52D3EAD50003EE464 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80303AF2D3EAD50003EE464 /* DocumentViewController.swift */; };
-		E80303B62D3EAD50003EE464 /* AlWriteDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80303AC2D3EAD50003EE464 /* AlWriteDocument.swift */; };
-		E80303B72D3EAD50003EE464 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80303AD2D3EAD50003EE464 /* AppDelegate.swift */; };
-		E80303B82D3EAD51003EE464 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E80303AE2D3EAD50003EE464 /* Assets.xcassets */; };
-		E80303BC2D3EAD59003EE464 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E80303BA2D3EAD59003EE464 /* LaunchScreen.storyboard */; };
-		E80303FB2D4674FE003EE464 /* EngineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80303FA2D4674F8003EE464 /* EngineProvider.swift */; };
-		E8F380652D46785D0059D409 /* MyCertificate.c in Sources */ = {isa = PBXBuildFile; fileRef = E8F380632D46785D0059D409 /* MyCertificate.c */; };
-		E8F380872D4678D50059D409 /* EditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3806C2D4678D50059D409 /* EditorViewModel.swift */; };
-		E8F380882D4678D50059D409 /* NSAttributedString+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3807D2D4678D50059D409 /* NSAttributedString+Helper.swift */; };
-		E8F380892D4678D50059D409 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380672D4678D50059D409 /* DisplayViewController.swift */; };
-		E8F3808A2D4678D50059D409 /* UIFont+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380822D4678D50059D409 /* UIFont+Helper.swift */; };
-		E8F3808B2D4678D50059D409 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380792D4678D50059D409 /* Helper.swift */; };
-		E8F3808C2D4678D50059D409 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380722D4678D50059D409 /* InputView.swift */; };
-		E8F3808D2D4678D50059D409 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3807F2D4678D50059D409 /* Path.swift */; };
-		E8F3808E2D4678D50059D409 /* OffscreenRenderSurfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380732D4678D50059D409 /* OffscreenRenderSurfaces.swift */; };
-		E8F3808F2D4678D50059D409 /* RenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380742D4678D50059D409 /* RenderView.swift */; };
-		E8F380902D4678D50059D409 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3807B2D4678D50059D409 /* ImageLoader.swift */; };
-		E8F380912D4678D50059D409 /* TextFormatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380812D4678D50059D409 /* TextFormatHelper.swift */; };
-		E8F380922D4678D50059D409 /* NSFileManager+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3807E2D4678D50059D409 /* NSFileManager+Additions.swift */; };
-		E8F380932D4678D50059D409 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380712D4678D50059D409 /* Canvas.swift */; };
-		E8F380942D4678D50059D409 /* SmartGuideViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E8F3806F2D4678D50059D409 /* SmartGuideViewController.mm */; };
-		E8F380952D4678D50059D409 /* CTRun+Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380772D4678D50059D409 /* CTRun+Metrics.swift */; };
-		E8F380962D4678D50059D409 /* SynchronizedSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380802D4678D50059D409 /* SynchronizedSwift.swift */; };
-		E8F380972D4678D50059D409 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380782D4678D50059D409 /* FontMetricsProvider.swift */; };
-		E8F380982D4678D50059D409 /* IInkUIRefImplUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3807A2D4678D50059D409 /* IInkUIRefImplUtils.swift */; };
-		E8F380992D4678D50059D409 /* DisplayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380682D4678D50059D409 /* DisplayViewModel.swift */; };
-		E8F3809A2D4678D50059D409 /* DisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380662D4678D50059D409 /* DisplayModel.swift */; };
-		E8F3809B2D4678D50059D409 /* EditorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3806A2D4678D50059D409 /* EditorModel.swift */; };
-		E8F3809C2D4678D50059D409 /* ContextualActionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F380762D4678D50059D409 /* ContextualActionsHelper.swift */; };
-		E8F3809D2D4678D50059D409 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3806B2D4678D50059D409 /* EditorViewController.swift */; };
-		E8F3809E2D4678D50059D409 /* ImagePainter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F3807C2D4678D50059D409 /* ImagePainter.swift */; };
+		E87DA2922D91F6F500AB7C24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87DA2902D91F6F500AB7C24 /* LaunchScreen.storyboard */; };
+		E87DA2932D91F6F500AB7C24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87DA28E2D91F6F500AB7C24 /* Assets.xcassets */; };
+		E87DA2972D91F6F500AB7C24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */; };
+		E87DA2982D91F6F500AB7C24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */; };
+		E87DA29D2D91F6F500AB7C24 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2992D91F6F500AB7C24 /* Store.swift */; };
+		E87DA29E2D91F6F500AB7C24 /* ViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA29A2D91F6F500AB7C24 /* ViewStore.swift */; };
+		E87DA2A22D91F6F500AB7C24 /* MyCertificate.c in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A02D91F6F500AB7C24 /* MyCertificate.c */; };
+		E87DA2C42D91F6F500AB7C24 /* AlWriteDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A32D91F6F500AB7C24 /* AlWriteDocument.swift */; };
+		E87DA2C52D91F6F500AB7C24 /* DocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */; };
+		E87DA2C62D91F6F500AB7C24 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2A92D91F6F500AB7C24 /* DrawingView.swift */; };
+		E87DA2C72D91F6F500AB7C24 /* DrawingDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */; };
+		E87DA2C82D91F6F500AB7C24 /* DrawingScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */; };
+		E87DA2C92D91F6F500AB7C24 /* DrawingSceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */; };
+		E87DA2CA2D91F6F500AB7C24 /* DrawingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */; };
+		E87DA2CB2D91F6F500AB7C24 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */; };
+		E87DA2CC2D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B22D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift */; };
+		E87DA2CD2D91F6F500AB7C24 /* RecognitionProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B32D91F6F500AB7C24 /* RecognitionProtocols.swift */; };
+		E87DA2CE2D91F6F500AB7C24 /* RecognitionEngineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B52D91F6F500AB7C24 /* RecognitionEngineFactory.swift */; };
+		E87DA2CF2D91F6F500AB7C24 /* FontMetricsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B72D91F6F500AB7C24 /* FontMetricsProvider.swift */; };
+		E87DA2D02D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B82D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift */; };
+		E87DA2D12D91F6F500AB7C24 /* MyScriptRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2B92D91F6F500AB7C24 /* MyScriptRecognitionService.swift */; };
+		E87DA2D22D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BA2D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift */; };
+		E87DA2D32D91F6F500AB7C24 /* RecognitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BB2D91F6F500AB7C24 /* RecognitionManager.swift */; };
+		E87DA2D42D91F6F500AB7C24 /* RecognitionModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */; };
+		E87DA2D52D91F6F500AB7C24 /* EngineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */; };
+		E87DA2D62D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09FCEC16E30F685E3BFEC03A /* Pods-AlWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.release.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.release.xcconfig"; sourceTree = "<group>"; };
-		3EF3E087C908554DAA08E676 /* Pods-AlWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.debug.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.debug.xcconfig"; sourceTree = "<group>"; };
-		D81959886D989577728CC549 /* libPods-AlWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E80303AC2D3EAD50003EE464 /* AlWriteDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlWriteDocument.swift; sourceTree = "<group>"; };
-		E80303AD2D3EAD50003EE464 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E80303AE2D3EAD50003EE464 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E80303AF2D3EAD50003EE464 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
-		E80303B02D3EAD50003EE464 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
-		E80303B22D3EAD50003EE464 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E80303BB2D3EAD59003EE464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E80303FA2D4674F8003EE464 /* EngineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineProvider.swift; sourceTree = "<group>"; };
+		E87DA26D2D91F6F500AB7C24 /* myscript-iink-recognition-diagram.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-diagram.version.txt"; sourceTree = "<group>"; };
+		E87DA26E2D91F6F500AB7C24 /* myscript-iink-recognition-math.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-math.version.txt"; sourceTree = "<group>"; };
+		E87DA26F2D91F6F500AB7C24 /* myscript-iink-recognition-raw-content.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-raw-content.version.txt"; sourceTree = "<group>"; };
+		E87DA2702D91F6F500AB7C24 /* myscript-iink-recognition-text-en_US.version.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "myscript-iink-recognition-text-en_US.version.txt"; sourceTree = "<group>"; };
+		E87DA2722D91F6F500AB7C24 /* diagram.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = diagram.conf; sourceTree = "<group>"; };
+		E87DA2732D91F6F500AB7C24 /* en_US.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = en_US.conf; sourceTree = "<group>"; };
+		E87DA2742D91F6F500AB7C24 /* math.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = math.conf; sourceTree = "<group>"; };
+		E87DA2752D91F6F500AB7C24 /* raw-content.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "raw-content.conf"; sourceTree = "<group>"; };
+		E87DA2772D91F6F500AB7C24 /* diagram.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = diagram.conf; sourceTree = "<group>"; };
+		E87DA2782D91F6F500AB7C24 /* en_US.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = en_US.conf; sourceTree = "<group>"; };
+		E87DA2792D91F6F500AB7C24 /* math.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = math.conf; sourceTree = "<group>"; };
+		E87DA27A2D91F6F500AB7C24 /* raw-content.conf */ = {isa = PBXFileReference; lastKnownFileType = text; path = "raw-content.conf"; sourceTree = "<group>"; };
+		E87DA27C2D91F6F500AB7C24 /* ank-diagram.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ank-diagram.res"; sourceTree = "<group>"; };
+		E87DA27D2D91F6F500AB7C24 /* ank-raw-content.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ank-raw-content.res"; sourceTree = "<group>"; };
+		E87DA27F2D91F6F500AB7C24 /* en_US-ak-cur.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-cur.res"; sourceTree = "<group>"; };
+		E87DA2802D91F6F500AB7C24 /* en_US-ak-cur.lite.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-cur.lite.res"; sourceTree = "<group>"; };
+		E87DA2812D91F6F500AB7C24 /* en_US-ak-superimposed.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-superimposed.res"; sourceTree = "<group>"; };
+		E87DA2822D91F6F500AB7C24 /* en_US-ak-superimposed.lite.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-ak-superimposed.lite.res"; sourceTree = "<group>"; };
+		E87DA2832D91F6F500AB7C24 /* en_US-lk-text.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-lk-text.res"; sourceTree = "<group>"; };
+		E87DA2842D91F6F500AB7C24 /* en_US-lk-text.lite.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "en_US-lk-text.lite.res"; sourceTree = "<group>"; };
+		E87DA2872D91F6F500AB7C24 /* math-ak.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "math-ak.res"; sourceTree = "<group>"; };
+		E87DA2882D91F6F500AB7C24 /* math-grm-standard.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "math-grm-standard.res"; sourceTree = "<group>"; };
+		E87DA28A2D91F6F500AB7C24 /* shk-diagram.res */ = {isa = PBXFileReference; lastKnownFileType = file; path = "shk-diagram.res"; sourceTree = "<group>"; };
+		E87DA28E2D91F6F500AB7C24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E87DA28F2D91F6F500AB7C24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E87DA2992D91F6F500AB7C24 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E87DA29A2D91F6F500AB7C24 /* ViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStore.swift; sourceTree = "<group>"; };
+		E87DA29F2D91F6F500AB7C24 /* MyCertificate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCertificate.h; sourceTree = "<group>"; };
+		E87DA2A02D91F6F500AB7C24 /* MyCertificate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyCertificate.c; sourceTree = "<group>"; };
+		E87DA2A32D91F6F500AB7C24 /* AlWriteDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlWriteDocument.swift; sourceTree = "<group>"; };
+		E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentViewController.swift; sourceTree = "<group>"; };
+		E87DA2A92D91F6F500AB7C24 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingDependenciesContainer.swift; sourceTree = "<group>"; };
+		E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScene.swift; sourceTree = "<group>"; };
+		E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingSceneBuilder.swift; sourceTree = "<group>"; };
+		E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingStore.swift; sourceTree = "<group>"; };
+		E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		E87DA2B22D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandwritingRecognitionDelegate.swift; sourceTree = "<group>"; };
+		E87DA2B32D91F6F500AB7C24 /* RecognitionProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionProtocols.swift; sourceTree = "<group>"; };
+		E87DA2B52D91F6F500AB7C24 /* RecognitionEngineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionEngineFactory.swift; sourceTree = "<group>"; };
+		E87DA2B72D91F6F500AB7C24 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
+		E87DA2B82D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptRecognitionEngine.swift; sourceTree = "<group>"; };
+		E87DA2B92D91F6F500AB7C24 /* MyScriptRecognitionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptRecognitionService.swift; sourceTree = "<group>"; };
+		E87DA2BA2D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitToMyScriptConverter.swift; sourceTree = "<group>"; };
+		E87DA2BB2D91F6F500AB7C24 /* RecognitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionManager.swift; sourceTree = "<group>"; };
+		E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognitionModes.swift; sourceTree = "<group>"; };
+		E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngineProvider.swift; sourceTree = "<group>"; };
+		E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyScriptInteractiveInk_Runtime.swift; sourceTree = "<group>"; };
+		E8BB67332D90BEA400A768DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D68FA92D32BE7600FD6971 /* AlWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8F380622D46785D0059D409 /* MyCertificate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCertificate.h; sourceTree = "<group>"; };
-		E8F380632D46785D0059D409 /* MyCertificate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyCertificate.c; sourceTree = "<group>"; };
-		E8F380662D4678D50059D409 /* DisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayModel.swift; sourceTree = "<group>"; };
-		E8F380672D4678D50059D409 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
-		E8F380682D4678D50059D409 /* DisplayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewModel.swift; sourceTree = "<group>"; };
-		E8F3806A2D4678D50059D409 /* EditorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorModel.swift; sourceTree = "<group>"; };
-		E8F3806B2D4678D50059D409 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
-		E8F3806C2D4678D50059D409 /* EditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewModel.swift; sourceTree = "<group>"; };
-		E8F3806E2D4678D50059D409 /* SmartGuideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartGuideViewController.h; sourceTree = "<group>"; };
-		E8F3806F2D4678D50059D409 /* SmartGuideViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SmartGuideViewController.mm; sourceTree = "<group>"; };
-		E8F380712D4678D50059D409 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
-		E8F380722D4678D50059D409 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
-		E8F380732D4678D50059D409 /* OffscreenRenderSurfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffscreenRenderSurfaces.swift; sourceTree = "<group>"; };
-		E8F380742D4678D50059D409 /* RenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderView.swift; sourceTree = "<group>"; };
-		E8F380762D4678D50059D409 /* ContextualActionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextualActionsHelper.swift; sourceTree = "<group>"; };
-		E8F380772D4678D50059D409 /* CTRun+Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CTRun+Metrics.swift"; sourceTree = "<group>"; };
-		E8F380782D4678D50059D409 /* FontMetricsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontMetricsProvider.swift; sourceTree = "<group>"; };
-		E8F380792D4678D50059D409 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		E8F3807A2D4678D50059D409 /* IInkUIRefImplUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IInkUIRefImplUtils.swift; sourceTree = "<group>"; };
-		E8F3807B2D4678D50059D409 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		E8F3807C2D4678D50059D409 /* ImagePainter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePainter.swift; sourceTree = "<group>"; };
-		E8F3807D2D4678D50059D409 /* NSAttributedString+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Helper.swift"; sourceTree = "<group>"; };
-		E8F3807E2D4678D50059D409 /* NSFileManager+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Additions.swift"; sourceTree = "<group>"; };
-		E8F3807F2D4678D50059D409 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
-		E8F380802D4678D50059D409 /* SynchronizedSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynchronizedSwift.swift; sourceTree = "<group>"; };
-		E8F380812D4678D50059D409 /* TextFormatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFormatHelper.swift; sourceTree = "<group>"; };
-		E8F380822D4678D50059D409 /* UIFont+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Helper.swift"; sourceTree = "<group>"; };
-		E8F380842D4678D50059D409 /* IInkUIReferenceImplementation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IInkUIReferenceImplementation.h; sourceTree = "<group>"; };
-		E8F380852D4678D50059D409 /* IInkUIReferenceImplementation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IInkUIReferenceImplementation-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,37 +95,315 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48788A85822464A4145DBBEF /* libPods-AlWrite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		16CE4DB41704BE2B01193DD8 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D81959886D989577728CC549 /* libPods-AlWrite.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		62FE5F92971BAB2EA16D7341 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3EF3E087C908554DAA08E676 /* Pods-AlWrite.debug.xcconfig */,
-				09FCEC16E30F685E3BFEC03A /* Pods-AlWrite.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E87DA2712D91F6F500AB7C24 /* INFO */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA26D2D91F6F500AB7C24 /* myscript-iink-recognition-diagram.version.txt */,
+				E87DA26E2D91F6F500AB7C24 /* myscript-iink-recognition-math.version.txt */,
+				E87DA26F2D91F6F500AB7C24 /* myscript-iink-recognition-raw-content.version.txt */,
+				E87DA2702D91F6F500AB7C24 /* myscript-iink-recognition-text-en_US.version.txt */,
+			);
+			path = INFO;
+			sourceTree = "<group>";
+		};
+		E87DA2762D91F6F500AB7C24 /* conf */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2722D91F6F500AB7C24 /* diagram.conf */,
+				E87DA2732D91F6F500AB7C24 /* en_US.conf */,
+				E87DA2742D91F6F500AB7C24 /* math.conf */,
+				E87DA2752D91F6F500AB7C24 /* raw-content.conf */,
+			);
+			path = conf;
+			sourceTree = "<group>";
+		};
+		E87DA27B2D91F6F500AB7C24 /* conf-lite */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2772D91F6F500AB7C24 /* diagram.conf */,
+				E87DA2782D91F6F500AB7C24 /* en_US.conf */,
+				E87DA2792D91F6F500AB7C24 /* math.conf */,
+				E87DA27A2D91F6F500AB7C24 /* raw-content.conf */,
+			);
+			path = "conf-lite";
+			sourceTree = "<group>";
+		};
+		E87DA27E2D91F6F500AB7C24 /* analyzer */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA27C2D91F6F500AB7C24 /* ank-diagram.res */,
+				E87DA27D2D91F6F500AB7C24 /* ank-raw-content.res */,
+			);
+			path = analyzer;
+			sourceTree = "<group>";
+		};
+		E87DA2852D91F6F500AB7C24 /* en_US */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA27F2D91F6F500AB7C24 /* en_US-ak-cur.res */,
+				E87DA2802D91F6F500AB7C24 /* en_US-ak-cur.lite.res */,
+				E87DA2812D91F6F500AB7C24 /* en_US-ak-superimposed.res */,
+				E87DA2822D91F6F500AB7C24 /* en_US-ak-superimposed.lite.res */,
+				E87DA2832D91F6F500AB7C24 /* en_US-lk-text.res */,
+				E87DA2842D91F6F500AB7C24 /* en_US-lk-text.lite.res */,
+			);
+			path = en_US;
+			sourceTree = "<group>";
+		};
+		E87DA2862D91F6F500AB7C24 /* en_US 2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "en_US 2";
+			sourceTree = "<group>";
+		};
+		E87DA2892D91F6F500AB7C24 /* math */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2872D91F6F500AB7C24 /* math-ak.res */,
+				E87DA2882D91F6F500AB7C24 /* math-grm-standard.res */,
+			);
+			path = math;
+			sourceTree = "<group>";
+		};
+		E87DA28B2D91F6F500AB7C24 /* shape */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA28A2D91F6F500AB7C24 /* shk-diagram.res */,
+			);
+			path = shape;
+			sourceTree = "<group>";
+		};
+		E87DA28C2D91F6F500AB7C24 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA27E2D91F6F500AB7C24 /* analyzer */,
+				E87DA2852D91F6F500AB7C24 /* en_US */,
+				E87DA2862D91F6F500AB7C24 /* en_US 2 */,
+				E87DA2892D91F6F500AB7C24 /* math */,
+				E87DA28B2D91F6F500AB7C24 /* shape */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		E87DA28D2D91F6F500AB7C24 /* recognition-assets */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2762D91F6F500AB7C24 /* conf */,
+				E87DA27B2D91F6F500AB7C24 /* conf-lite */,
+				E87DA28C2D91F6F500AB7C24 /* resources */,
+			);
+			path = "recognition-assets";
+			sourceTree = "<group>";
+		};
+		E87DA2912D91F6F500AB7C24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2712D91F6F500AB7C24 /* INFO */,
+				E87DA28D2D91F6F500AB7C24 /* recognition-assets */,
+				E87DA28E2D91F6F500AB7C24 /* Assets.xcassets */,
+				E87DA2902D91F6F500AB7C24 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E87DA2962D91F6F500AB7C24 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2942D91F6F500AB7C24 /* AppDelegate.swift */,
+				E87DA2952D91F6F500AB7C24 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E87DA29B2D91F6F500AB7C24 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2992D91F6F500AB7C24 /* Store.swift */,
+				E87DA29A2D91F6F500AB7C24 /* ViewStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		E87DA29C2D91F6F500AB7C24 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA29B2D91F6F500AB7C24 /* Store */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E87DA2A12D91F6F500AB7C24 /* MyScriptCertificate */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA29F2D91F6F500AB7C24 /* MyCertificate.h */,
+				E87DA2A02D91F6F500AB7C24 /* MyCertificate.c */,
+			);
+			path = MyScriptCertificate;
+			sourceTree = "<group>";
+		};
+		E87DA2A42D91F6F500AB7C24 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A32D91F6F500AB7C24 /* AlWriteDocument.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		E87DA2A62D91F6F500AB7C24 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A52D91F6F500AB7C24 /* DocumentViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E87DA2A72D91F6F500AB7C24 /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A42D91F6F500AB7C24 /* Domain */,
+				E87DA2A62D91F6F500AB7C24 /* Scene */,
+			);
+			path = Document;
+			sourceTree = "<group>";
+		};
+		E87DA2A82D91F6F500AB7C24 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		E87DA2AA2D91F6F500AB7C24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A92D91F6F500AB7C24 /* DrawingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E87DA2B02D91F6F500AB7C24 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A82D91F6F500AB7C24 /* Protocol */,
+				E87DA2AA2D91F6F500AB7C24 /* View */,
+				E87DA2AB2D91F6F500AB7C24 /* DrawingDependenciesContainer.swift */,
+				E87DA2AC2D91F6F500AB7C24 /* DrawingScene.swift */,
+				E87DA2AD2D91F6F500AB7C24 /* DrawingSceneBuilder.swift */,
+				E87DA2AE2D91F6F500AB7C24 /* DrawingStore.swift */,
+				E87DA2AF2D91F6F500AB7C24 /* DrawingViewController.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		E87DA2B12D91F6F500AB7C24 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B02D91F6F500AB7C24 /* Scene */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		E87DA2B42D91F6F500AB7C24 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B22D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift */,
+				E87DA2B32D91F6F500AB7C24 /* RecognitionProtocols.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E87DA2B62D91F6F500AB7C24 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B52D91F6F500AB7C24 /* RecognitionEngineFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		E87DA2BC2D91F6F500AB7C24 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B72D91F6F500AB7C24 /* FontMetricsProvider.swift */,
+				E87DA2B82D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift */,
+				E87DA2B92D91F6F500AB7C24 /* MyScriptRecognitionService.swift */,
+				E87DA2BA2D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift */,
+				E87DA2BB2D91F6F500AB7C24 /* RecognitionManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E87DA2BE2D91F6F500AB7C24 /* Strategies */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2BD2D91F6F500AB7C24 /* RecognitionModes.swift */,
+			);
+			path = Strategies;
+			sourceTree = "<group>";
+		};
+		E87DA2BF2D91F6F500AB7C24 /* Recognition */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2B42D91F6F500AB7C24 /* Core */,
+				E87DA2B62D91F6F500AB7C24 /* Factory */,
+				E87DA2BC2D91F6F500AB7C24 /* Services */,
+				E87DA2BE2D91F6F500AB7C24 /* Strategies */,
+			);
+			path = Recognition;
+			sourceTree = "<group>";
+		};
+		E87DA2C22D91F6F500AB7C24 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2C02D91F6F500AB7C24 /* EngineProvider.swift */,
+				E87DA2C12D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E87DA2C32D91F6F500AB7C24 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2A72D91F6F500AB7C24 /* Document */,
+				E87DA2B12D91F6F500AB7C24 /* Drawing */,
+				E87DA2BF2D91F6F500AB7C24 /* Recognition */,
+				E87DA2C22D91F6F500AB7C24 /* Utils */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		E8BB67342D90BEA400A768DB /* AlWrite */ = {
+			isa = PBXGroup;
+			children = (
+				E87DA2962D91F6F500AB7C24 /* Application */,
+				E87DA29C2D91F6F500AB7C24 /* Core */,
+				E87DA2A12D91F6F500AB7C24 /* MyScriptCertificate */,
+				E87DA2912D91F6F500AB7C24 /* Resources */,
+				E87DA2C32D91F6F500AB7C24 /* Sources */,
+				E8BB67332D90BEA400A768DB /* Info.plist */,
+			);
+			path = AlWrite;
 			sourceTree = "<group>";
 		};
 		E8D68FA02D32BE7600FD6971 = {
 			isa = PBXGroup;
 			children = (
-				E8D68FAB2D32BE7600FD6971 /* AlWrite */,
+				E8BB67342D90BEA400A768DB /* AlWrite */,
 				E8D68FAA2D32BE7600FD6971 /* Products */,
 				62FE5F92971BAB2EA16D7341 /* Pods */,
-				16CE4DB41704BE2B01193DD8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,106 +415,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E8D68FAB2D32BE7600FD6971 /* AlWrite */ = {
-			isa = PBXGroup;
-			children = (
-				E80303AC2D3EAD50003EE464 /* AlWriteDocument.swift */,
-				E8F380642D46785D0059D409 /* MyScriptSDK */,
-				E80303AD2D3EAD50003EE464 /* AppDelegate.swift */,
-				E80303AE2D3EAD50003EE464 /* Assets.xcassets */,
-				E80303AF2D3EAD50003EE464 /* DocumentViewController.swift */,
-				E80303BA2D3EAD59003EE464 /* LaunchScreen.storyboard */,
-				E80303B02D3EAD50003EE464 /* DrawingViewController.swift */,
-				E80303FA2D4674F8003EE464 /* EngineProvider.swift */,
-				E80303B22D3EAD50003EE464 /* SceneDelegate.swift */,
-			);
-			path = AlWrite;
-			sourceTree = "<group>";
-		};
-		E8F380642D46785D0059D409 /* MyScriptSDK */ = {
-			isa = PBXGroup;
-			children = (
-				E8F380852D4678D50059D409 /* IInkUIReferenceImplementation-Bridging-Header.h */,
-				E8F380842D4678D50059D409 /* IInkUIReferenceImplementation.h */,
-				E8F380622D46785D0059D409 /* MyCertificate.h */,
-				E8F380632D46785D0059D409 /* MyCertificate.c */,
-				E8F380862D4678D50059D409 /* IInkUIReferenceImplementation */,
-			);
-			path = MyScriptSDK;
-			sourceTree = "<group>";
-		};
-		E8F380692D4678D50059D409 /* Display */ = {
-			isa = PBXGroup;
-			children = (
-				E8F380662D4678D50059D409 /* DisplayModel.swift */,
-				E8F380672D4678D50059D409 /* DisplayViewController.swift */,
-				E8F380682D4678D50059D409 /* DisplayViewModel.swift */,
-			);
-			path = Display;
-			sourceTree = "<group>";
-		};
-		E8F3806D2D4678D50059D409 /* Editor */ = {
-			isa = PBXGroup;
-			children = (
-				E8F3806A2D4678D50059D409 /* EditorModel.swift */,
-				E8F3806B2D4678D50059D409 /* EditorViewController.swift */,
-				E8F3806C2D4678D50059D409 /* EditorViewModel.swift */,
-			);
-			path = Editor;
-			sourceTree = "<group>";
-		};
-		E8F380702D4678D50059D409 /* SmartGuide */ = {
-			isa = PBXGroup;
-			children = (
-				E8F3806E2D4678D50059D409 /* SmartGuideViewController.h */,
-				E8F3806F2D4678D50059D409 /* SmartGuideViewController.mm */,
-			);
-			path = SmartGuide;
-			sourceTree = "<group>";
-		};
-		E8F380752D4678D50059D409 /* UIObjects */ = {
-			isa = PBXGroup;
-			children = (
-				E8F380712D4678D50059D409 /* Canvas.swift */,
-				E8F380722D4678D50059D409 /* InputView.swift */,
-				E8F380732D4678D50059D409 /* OffscreenRenderSurfaces.swift */,
-				E8F380742D4678D50059D409 /* RenderView.swift */,
-			);
-			path = UIObjects;
-			sourceTree = "<group>";
-		};
-		E8F380832D4678D50059D409 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E8F380762D4678D50059D409 /* ContextualActionsHelper.swift */,
-				E8F380772D4678D50059D409 /* CTRun+Metrics.swift */,
-				E8F380782D4678D50059D409 /* FontMetricsProvider.swift */,
-				E8F380792D4678D50059D409 /* Helper.swift */,
-				E8F3807A2D4678D50059D409 /* IInkUIRefImplUtils.swift */,
-				E8F3807B2D4678D50059D409 /* ImageLoader.swift */,
-				E8F3807C2D4678D50059D409 /* ImagePainter.swift */,
-				E8F3807D2D4678D50059D409 /* NSAttributedString+Helper.swift */,
-				E8F3807E2D4678D50059D409 /* NSFileManager+Additions.swift */,
-				E8F3807F2D4678D50059D409 /* Path.swift */,
-				E8F380802D4678D50059D409 /* SynchronizedSwift.swift */,
-				E8F380812D4678D50059D409 /* TextFormatHelper.swift */,
-				E8F380822D4678D50059D409 /* UIFont+Helper.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		E8F380862D4678D50059D409 /* IInkUIReferenceImplementation */ = {
-			isa = PBXGroup;
-			children = (
-				E8F380692D4678D50059D409 /* Display */,
-				E8F3806D2D4678D50059D409 /* Editor */,
-				E8F380702D4678D50059D409 /* SmartGuide */,
-				E8F380752D4678D50059D409 /* UIObjects */,
-				E8F380832D4678D50059D409 /* Utils */,
-			);
-			path = IInkUIReferenceImplementation;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,10 +422,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8D68FBB2D32BE7700FD6971 /* Build configuration list for PBXNativeTarget "AlWrite" */;
 			buildPhases = (
-				9B8ABAB03F8B213F81F2960D /* [CP] Check Pods Manifest.lock */,
+				E8BB65412D90789100A768DB /* ShellScript */,
 				E8D68FA52D32BE7600FD6971 /* Sources */,
 				E8D68FA62D32BE7600FD6971 /* Frameworks */,
 				E8D68FA72D32BE7600FD6971 /* Resources */,
+				E87D2D592D91C55A00AB7C24 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -294,35 +476,49 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E80303BC2D3EAD59003EE464 /* LaunchScreen.storyboard in Resources */,
-				E80303B82D3EAD51003EE464 /* Assets.xcassets in Resources */,
+				E87DA2922D91F6F500AB7C24 /* LaunchScreen.storyboard in Resources */,
+				E87DA2932D91F6F500AB7C24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9B8ABAB03F8B213F81F2960D /* [CP] Check Pods Manifest.lock */ = {
+		E87D2D592D91C55A00AB7C24 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AlWrite-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "# Script to copy recognition assets to the app bundle\nRECOGNITION_ASSETS_DIR=\"${SRCROOT}/AlWrite/Resources/recognition-assets\"\nTARGET_DIR=\"${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/recognition-assets\"\n\n# Check if recognition assets exist\nif [ -d \"$RECOGNITION_ASSETS_DIR\" ]; then\n    echo \"✅ Found recognition assets at: $RECOGNITION_ASSETS_DIR\"\n    \n    # Create target directory if it doesn't exist\n    mkdir -p \"$TARGET_DIR\"\n    \n    # Copy recognition assets to the app bundle\n    cp -R \"$RECOGNITION_ASSETS_DIR\"/* \"$TARGET_DIR\"\n    \n    echo \"✅ Successfully copied recognition assets to: $TARGET_DIR\"\nelse\n    echo \"❌ Recognition assets not found at: $RECOGNITION_ASSETS_DIR\"\n    exit 1\nfi\n";
+		};
+		E8BB65412D90789100A768DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./retrieve_recognition-assets.sh AlWrite\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -331,47 +527,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E80303FB2D4674FE003EE464 /* EngineProvider.swift in Sources */,
-				E80303B32D3EAD50003EE464 /* SceneDelegate.swift in Sources */,
-				E80303B42D3EAD50003EE464 /* DrawingViewController.swift in Sources */,
-				E8F380652D46785D0059D409 /* MyCertificate.c in Sources */,
-				E80303B52D3EAD50003EE464 /* DocumentViewController.swift in Sources */,
-				E80303B62D3EAD50003EE464 /* AlWriteDocument.swift in Sources */,
-				E8F380872D4678D50059D409 /* EditorViewModel.swift in Sources */,
-				E8F380882D4678D50059D409 /* NSAttributedString+Helper.swift in Sources */,
-				E8F380892D4678D50059D409 /* DisplayViewController.swift in Sources */,
-				E8F3808A2D4678D50059D409 /* UIFont+Helper.swift in Sources */,
-				E8F3808B2D4678D50059D409 /* Helper.swift in Sources */,
-				E8F3808C2D4678D50059D409 /* InputView.swift in Sources */,
-				E8F3808D2D4678D50059D409 /* Path.swift in Sources */,
-				E8F3808E2D4678D50059D409 /* OffscreenRenderSurfaces.swift in Sources */,
-				E8F3808F2D4678D50059D409 /* RenderView.swift in Sources */,
-				E8F380902D4678D50059D409 /* ImageLoader.swift in Sources */,
-				E8F380912D4678D50059D409 /* TextFormatHelper.swift in Sources */,
-				E8F380922D4678D50059D409 /* NSFileManager+Additions.swift in Sources */,
-				E8F380932D4678D50059D409 /* Canvas.swift in Sources */,
-				E8F380942D4678D50059D409 /* SmartGuideViewController.mm in Sources */,
-				E8F380952D4678D50059D409 /* CTRun+Metrics.swift in Sources */,
-				E8F380962D4678D50059D409 /* SynchronizedSwift.swift in Sources */,
-				E8F380972D4678D50059D409 /* FontMetricsProvider.swift in Sources */,
-				E8F380982D4678D50059D409 /* IInkUIRefImplUtils.swift in Sources */,
-				E8F380992D4678D50059D409 /* DisplayViewModel.swift in Sources */,
-				E8F3809A2D4678D50059D409 /* DisplayModel.swift in Sources */,
-				E8F3809B2D4678D50059D409 /* EditorModel.swift in Sources */,
-				E8F3809C2D4678D50059D409 /* ContextualActionsHelper.swift in Sources */,
-				E8F3809D2D4678D50059D409 /* EditorViewController.swift in Sources */,
-				E8F3809E2D4678D50059D409 /* ImagePainter.swift in Sources */,
-				E80303B72D3EAD50003EE464 /* AppDelegate.swift in Sources */,
+				E87DA2972D91F6F500AB7C24 /* AppDelegate.swift in Sources */,
+				E87DA2C42D91F6F500AB7C24 /* AlWriteDocument.swift in Sources */,
+				E87DA2C52D91F6F500AB7C24 /* DocumentViewController.swift in Sources */,
+				E87DA2C62D91F6F500AB7C24 /* DrawingView.swift in Sources */,
+				E87DA2C72D91F6F500AB7C24 /* DrawingDependenciesContainer.swift in Sources */,
+				E87DA2C82D91F6F500AB7C24 /* DrawingScene.swift in Sources */,
+				E87DA2C92D91F6F500AB7C24 /* DrawingSceneBuilder.swift in Sources */,
+				E87DA2CA2D91F6F500AB7C24 /* DrawingStore.swift in Sources */,
+				E87DA2CB2D91F6F500AB7C24 /* DrawingViewController.swift in Sources */,
+				E87DA2CC2D91F6F500AB7C24 /* HandwritingRecognitionDelegate.swift in Sources */,
+				E87DA2CD2D91F6F500AB7C24 /* RecognitionProtocols.swift in Sources */,
+				E87DA2CE2D91F6F500AB7C24 /* RecognitionEngineFactory.swift in Sources */,
+				E87DA2CF2D91F6F500AB7C24 /* FontMetricsProvider.swift in Sources */,
+				E87DA2D02D91F6F500AB7C24 /* MyScriptRecognitionEngine.swift in Sources */,
+				E87DA2D12D91F6F500AB7C24 /* MyScriptRecognitionService.swift in Sources */,
+				E87DA2D22D91F6F500AB7C24 /* PencilKitToMyScriptConverter.swift in Sources */,
+				E87DA2D32D91F6F500AB7C24 /* RecognitionManager.swift in Sources */,
+				E87DA2D42D91F6F500AB7C24 /* RecognitionModes.swift in Sources */,
+				E87DA2D52D91F6F500AB7C24 /* EngineProvider.swift in Sources */,
+				E87DA2D62D91F6F500AB7C24 /* MyScriptInteractiveInk_Runtime.swift in Sources */,
+				E87DA29D2D91F6F500AB7C24 /* Store.swift in Sources */,
+				E87DA29E2D91F6F500AB7C24 /* ViewStore.swift in Sources */,
+				E87DA2982D91F6F500AB7C24 /* SceneDelegate.swift in Sources */,
+				E87DA2A22D91F6F500AB7C24 /* MyCertificate.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E80303BA2D3EAD59003EE464 /* LaunchScreen.storyboard */ = {
+		E87DA2902D91F6F500AB7C24 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E80303BB2D3EAD59003EE464 /* Base */,
+				E87DA28F2D91F6F500AB7C24 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -381,7 +570,6 @@
 /* Begin XCBuildConfiguration section */
 		E8D68FBC2D32BE7700FD6971 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EF3E087C908554DAA08E676 /* Pods-AlWrite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +578,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7Q99VT33B;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					../Frameworks,
+					"\"${PODS_ROOT}/Headers/Public/MyScriptInteractiveInk-Runtime\"",
+					"\"${PODS_ROOT}/MyScriptInteractiveInk-Runtime/include\"",
+					"$(SRCROOT)/AlWrite/MyScriptSDK",
+				);
 				INFOPLIST_FILE = AlWrite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -404,6 +600,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trofimpetyanov.AlWrite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AlWrite/MyScriptSDK/IInkUIReferenceImplementation-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,7 +609,6 @@
 		};
 		E8D68FBD2D32BE7700FD6971 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 09FCEC16E30F685E3BFEC03A /* Pods-AlWrite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -421,6 +617,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7Q99VT33B;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					../Frameworks,
+					"\"${PODS_ROOT}/Headers/Public/MyScriptInteractiveInk-Runtime\"",
+					"\"${PODS_ROOT}/MyScriptInteractiveInk-Runtime/include\"",
+					"$(SRCROOT)/AlWrite/MyScriptSDK",
+				);
 				INFOPLIST_FILE = AlWrite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -435,6 +639,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trofimpetyanov.AlWrite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AlWrite/MyScriptSDK/IInkUIReferenceImplementation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,7 +683,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -500,7 +706,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OBJC_BRIDGING_HEADER = "AlWrite/MyScriptSDK/IInkUIReferenceImplementation-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -542,7 +747,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -558,7 +763,6 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "AlWrite/MyScriptSDK/IInkUIReferenceImplementation-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

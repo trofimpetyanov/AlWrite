@@ -11,9 +11,9 @@
 #import <iink/IINKConfiguration.h>
 
 /** The gray color used for controls (buttons and ruler). */
-#define CONTROL_GRAY_COLOR [UIColor colorWithRed:0.58 green:0.62 blue:0.65 alpha:1.0]
+#define CONTROL_GRAY_COLOR [IInkUIRefImplUtils uiColorWithRgba:0x959DA6ff]
 /** The gray color used for displayed words. */
-#define WORD_GRAY_COLOR [UIColor colorWithRed:0.75 green:0.75 blue:0.75 alpha:1.0]
+#define WORD_GRAY_COLOR [IInkUIRefImplUtils uiColorWithRgba:0xbfbfbfff]
 
 typedef NS_ENUM(NSUInteger, UpdateCause)
 {
@@ -260,12 +260,15 @@ typedef NS_ENUM(NSUInteger, TextBlockStyle)
         self.removeHighlightDelay = [configuration getNumberForKey:@"smart-guide.highlight-removal-delay" defaultValue:2.0               error:nil].value;
 
         self.exportParams = [self.editor.engine createParameterSet];
-        [self.exportParams setBoolean:YES forKey:@"export.jiix.text.words"   error:nil];
-        [self.exportParams setBoolean:NO  forKey:@"export.jiix.strokes"      error:nil];
-        [self.exportParams setBoolean:NO  forKey:@"export.jiix.bounding-box" error:nil];
-        [self.exportParams setBoolean:NO  forKey:@"export.jiix.glyphs"       error:nil];
-        [self.exportParams setBoolean:NO  forKey:@"export.jiix.primitives"   error:nil];
-        [self.exportParams setBoolean:NO  forKey:@"export.jiix.chars"        error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.bounding-box"    error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.glyphs"          error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.primitives"      error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.strokes"         error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.text.chars"      error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.text.lines"      error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.text.spans"      error:nil];
+        [self.exportParams setBoolean:NO  forKey:@"export.jiix.text.structure"  error:nil];
+        [self.exportParams setBoolean:YES forKey:@"export.jiix.text.words"      error:nil];
 
         self.importParams = [self.editor.engine createParameterSet];
         [self.importParams setString:@"update"  forKey:@"diagram.import.jiix.action"        error:nil];
@@ -663,9 +666,14 @@ typedef NS_ENUM(NSUInteger, TextBlockStyle)
     {
         IINKContentBlock* newActiveBlock = [self.editor getBlockById:self.activeBlock.identifier];
         if (newActiveBlock)
+        {
             self.activeBlock = newActiveBlock;
+        }
         else
+        {
+            [self updateWithBlock:nil cause:UpdateCauseEdit];
             return;
+        }
     }
 
     if (self.activeBlock && [blockIds containsObject:self.activeBlock.identifier])
