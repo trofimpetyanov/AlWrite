@@ -100,13 +100,11 @@ class DrawingView: UIView {
     }
 
     func setToolPickerVisible(_ visible: Bool) {
-        if visible && !canvasView.isFirstResponder {
+        if visible {
             canvasView.becomeFirstResponder()
-        }
-
-        toolPicker.setVisible(visible, forFirstResponder: canvasView)
-
-        if !visible {
+            toolPicker.setVisible(true, forFirstResponder: canvasView)
+        } else {
+            toolPicker.setVisible(false, forFirstResponder: canvasView)
             canvasView.resignFirstResponder()
         }
     }
