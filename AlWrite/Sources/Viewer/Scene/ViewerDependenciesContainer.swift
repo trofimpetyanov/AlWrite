@@ -1,9 +1,9 @@
 import Foundation
 
 struct ViewerDependenciesContainer {
-    let recognitionManager: HandwritingRecognitionManager
-    
-    init(recognitionManager: HandwritingRecognitionManager) {
+    let recognitionManager: HandwritingRecognizer
+
+    init(recognitionManager: HandwritingRecognizer) {
         self.recognitionManager = recognitionManager
     }
 }

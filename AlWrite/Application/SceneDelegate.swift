@@ -11,18 +11,15 @@ import PencilKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    private var applicationRouter: ApplicationRouter?
+    private var baseRouter: BaseRouter?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = scene as? UIWindowScene else { return }
 
         window = UIWindow(windowScene: windowScene)
 
-        let dependenciesContainer = DependenciesContainer()
-        let router = ApplicationRouter(dependenciesContainer: dependenciesContainer)
-        self.applicationRouter = router
+        let router = BaseRouter()
+        self.baseRouter = router
 
         router.start()
         

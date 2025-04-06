@@ -23,8 +23,4 @@ final class ViewStore<ViewState, ViewEvent>: ObservableObject {
     func handle(_ event: ViewEvent) {
         eventHandler(event)
     }
-    
-    subscript<Value>(dynamicMember keyPath: KeyPath<ViewState, Value>) -> Value {
-        state[keyPath: keyPath]
-    }
 } 

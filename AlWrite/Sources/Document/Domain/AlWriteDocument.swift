@@ -1,8 +1,10 @@
+import SwiftUI
+import UniformTypeIdentifiers
 import PencilKit
-import UIKit
+import Combine
 
 class AlWriteDocument: UIDocument {
-    var drawing: PKDrawing? {
+    var drawing: PKDrawing = PKDrawing() {
         didSet {
             if oldValue != drawing {
                 updateChangeCount(.done)
@@ -24,8 +26,4 @@ class AlWriteDocument: UIDocument {
         let documentData = try JSONDecoder().decode(AlWriteDocumentData.self, from: data)
         drawing = documentData.drawing
     }
-}
-
-struct AlWriteDocumentData: Codable {
-    let drawing: PKDrawing?
 }

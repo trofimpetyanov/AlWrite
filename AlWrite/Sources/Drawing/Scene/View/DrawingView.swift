@@ -44,16 +44,13 @@ class DrawingView: UIView {
     // MARK: - Methods
     // MARK: Configure
     func configure(with state: DrawingState) {
-        setToolPickerVisible(state.isToolPickerVisible)
-        canvasView.drawing = state.drawing
-    }
+        if canvasView.drawing != state.drawing {
+            canvasView.drawing = state.drawing
+        }
 
-    func setDrawing(_ drawing: PKDrawing) {
-        canvasView.drawing = drawing
-    }
-
-    func getDirectCanvasDrawing() -> PKDrawing {
-        return canvasView.drawing
+        if toolPicker.isVisible != state.isToolPickerVisible {
+            setToolPickerVisible(state.isToolPickerVisible)
+        }
     }
 
     // MARK: Private Methods

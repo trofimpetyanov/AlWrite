@@ -8,41 +8,35 @@ final class ViewerStore: Store {
     var statePublisher: Published<ViewerState>.Publisher { $state }
 
     private let dependenciesContainer: ViewerDependenciesContainer
-    private let recognitionManager: HandwritingRecognitionManager
-
-    private var currentDrawing: PKDrawing?
+    private let recognitionManager: HandwritingRecognizer
 
     init(dependenciesContainer: ViewerDependenciesContainer) {
         self.state = ViewerState()
         self.dependenciesContainer = dependenciesContainer
         self.recognitionManager = dependenciesContainer.recognitionManager
+        recognitionManager.delegate = self
     }
 
     func handle(_ event: ViewerEvent) {
         switch event {
-        case .recognizeRequested(let drawing):
-            handleRecognizeRequested(drawing)
-
-        case .recognitionCompleted(let result):
-            handleRecognitionCompleted(result)
-
+        case .drawingUpdated(let drawing):
+            state.drawing = drawing
+        case .recognizeRequested:
+            handleRecognizeRequested()
         case .switchRecognitionMode(let mode):
             state.recognitionMode = mode
             recognitionManager.setRecognitionMode(convertToStandardMode(mode))
-
-        case .toggleVisibility:
-            state.isVisible.toggle()
         }
     }
 
-    private func handleRecognizeRequested(_ drawing: PKDrawing) {
-        if drawing.strokes.isEmpty {
+    private func handleRecognizeRequested() {
+        if state.drawing.strokes.isEmpty {
             handleRecognitionCompleted(.failure(RecognitionError.noStrokesToRecognize))
             return
         }
 
         state.isLoading = true
-        dependenciesContainer.recognitionManager.processDrawing(drawing)
+        recognitionManager.processDrawing(state.drawing)
     }
 
     private func handleRecognitionCompleted(_ result: Result<String, Error>) {
@@ -51,14 +45,8 @@ final class ViewerStore: Store {
         switch result {
         case .success(let text):
             state.recognizedText = text
-            if state.isVisible {
-                state.isVisible = true
-            }
         case .failure(_):
             state.recognizedText = "Не удалось распознать текст"
-            if state.isVisible {
-                state.isVisible = true
-            }
         }
     }
     

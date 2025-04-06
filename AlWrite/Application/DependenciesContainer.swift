@@ -1,40 +1,16 @@
-import UIKit
-import PencilKit
+import SwiftUI
 
 @MainActor
- final class DependenciesContainer {
-    private lazy var recognitionEngineFactory: RecognitionEngineFactory = {
-        RecognitionEngineFactory()
-    }()
-    
-    // MARK: - Document
-    func makeDocumentViewController(router: Routing) -> DocumentViewController {
-        let documentViewController = DocumentViewController()
-        documentViewController.router = router
-        return documentViewController
+final class DependenciesContainer {
+    @Binding var document: AlWriteDocument
+
+    var recognitionEngineFactory: RecognitionEngineFactory
+
+    init(
+        document: Binding<AlWriteDocument>,
+        recognitionEngineFactory: RecognitionEngineFactory = RecognitionEngineFactory()
+    ) {
+        self._document = document
+        self.recognitionEngineFactory = recognitionEngineFactory
     }
-    
-    // MARK: - Drawing
-    func makeDrawingViewController() -> DrawingViewController {
-        let drawingViewController = DrawingSceneBuilder().build(
-            dependenciesContainer: DrawingDependenciesContainer(
-                engineFactory: recognitionEngineFactory
-            )
-        )
-        
-        return drawingViewController
-    }
-    
-    // MARK: - Viewer
-    func makeViewerViewController() -> ViewerViewController {
-        let viewerViewController = ViewerSceneBuilder().build(
-            dependenciesContainer: ViewerDependenciesContainer(
-                recognitionManager: HandwritingRecognitionManager(
-                    engineFactory: recognitionEngineFactory
-                )
-            )
-        )
-        
-        return viewerViewController
-    }
-} 
+}

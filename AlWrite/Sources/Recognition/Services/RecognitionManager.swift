@@ -2,7 +2,16 @@ import Foundation
 import PencilKit
 
 @MainActor
-final class HandwritingRecognitionManager {
+protocol HandwritingRecognizer: AnyObject {
+
+    var delegate: HandwritingRecognitionDelegate? { get set }
+
+    func setRecognitionMode(_ mode: StandardRecognitionMode)
+    func processDrawing(_ drawing: PKDrawing)
+}
+
+@MainActor
+class HandwritingRecognitionManager: HandwritingRecognizer {
     private let recognitionEngine: RecognitionEngine
     private var recognitionService: RecognitionService
     private var isServiceInitialized = false
@@ -17,13 +26,6 @@ final class HandwritingRecognitionManager {
     private func reinitializeService() {
         self.recognitionService = recognitionEngine.createRecognizer()
         isServiceInitialized = true
-    }
-    
-    func getRecognitionMode() -> StandardRecognitionMode {
-        if let mode = recognitionEngine.currentMode as? StandardRecognitionMode {
-            return mode
-        }
-        return .text
     }
     
     func setRecognitionMode(_ mode: StandardRecognitionMode) {
@@ -72,9 +74,5 @@ final class HandwritingRecognitionManager {
                 }
             }
         }
-    }
-    
-    func clear() {
-        recognitionService.clear()
     }
 }

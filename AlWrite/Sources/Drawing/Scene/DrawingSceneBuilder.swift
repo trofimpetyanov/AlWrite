@@ -2,14 +2,13 @@ import Foundation
 
 @MainActor
 struct DrawingSceneBuilder {
-    func build(
-        dependenciesContainer: DrawingDependenciesContainer
-    ) -> DrawingViewController {
-        let store = DrawingStore(dependenciesContainer: dependenciesContainer)
+    func build() -> DrawingViewController {
+        let store = DrawingStore(
+            dependenciesContainer: DrawingDependenciesContainer()
+        )
+
         let viewStore = ViewStore(store)
         let viewController = DrawingViewController(viewStore: viewStore)
-
-        store.delegate = viewController
         
         return viewController
     }

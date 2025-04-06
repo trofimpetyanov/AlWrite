@@ -1,11 +1,12 @@
 import PencilKit
 
 struct ViewerState: Equatable {
-    enum ViewerRecognitionMode: String, Equatable {
+    enum ViewerRecognitionMode: String, Equatable, CaseIterable {
         case text = "Текст"
         case math = "Формула"
     }
 
+    var drawing: PKDrawing = PKDrawing()
     var recognizedText: String = ""
     var recognitionMode: ViewerRecognitionMode = .text
     var isLoading: Bool = false
@@ -13,23 +14,9 @@ struct ViewerState: Equatable {
 }
 
 enum ViewerEvent: Equatable {
-    case recognizeRequested(PKDrawing)
-    case recognitionCompleted(Result<String, Error>)
+    case drawingUpdated(PKDrawing)
+    case recognizeRequested
     case switchRecognitionMode(ViewerState.ViewerRecognitionMode)
-    case toggleVisibility
-
-    static func == (lhs: ViewerEvent, rhs: ViewerEvent) -> Bool {
-        switch (lhs, rhs) {
-        case (.recognizeRequested, .recognizeRequested),
-             (.recognitionCompleted, .recognitionCompleted),
-             (.toggleVisibility, .toggleVisibility):
-            return true
-        case (.switchRecognitionMode(let lhs), .switchRecognitionMode(let rhs)):
-            return lhs == rhs
-        default:
-            return false
-        }
-    }
 }
 
 typealias ViewerViewState = ViewerState
