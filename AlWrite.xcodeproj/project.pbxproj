@@ -11,6 +11,7 @@
 		E82AF5D62DA014CE00527EF5 /* DocumentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82AF5D12DA014CE00527EF5 /* DocumentStore.swift */; };
 		E82AF5D72DA014CE00527EF5 /* DocumentScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82AF5CF2DA014CE00527EF5 /* DocumentScene.swift */; };
 		E82AF5D92DA01C0E00527EF5 /* DocumentDependenciesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82AF5D82DA01C0E00527EF5 /* DocumentDependenciesContainer.swift */; };
+		E85B30E12DA2DF7E007F1260 /* LaTeXSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E85B30E02DA2DF7E007F1260 /* LaTeXSwiftUI */; };
 		E85BF5962DA2A0D9007F1260 /* DocumentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85BF5952DA2A0D9007F1260 /* DocumentRouter.swift */; };
 		E85BF5982DA2A0E7007F1260 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85BF5972DA2A0E7007F1260 /* BaseRouter.swift */; };
 		E85BF59B2DA2A186007F1260 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85BF59A2DA2A186007F1260 /* SceneDelegate.swift */; };
@@ -126,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE9F7E75CCBE443E63E01F6C /* libPods-AlWrite.a in Frameworks */,
+				E85B30E12DA2DF7E007F1260 /* LaTeXSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +536,9 @@
 				Base,
 			);
 			mainGroup = E8D68FA02D32BE7600FD6971;
+			packageReferences = (
+				E85B30DF2DA2DF7E007F1260 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */,
+			);
 			productRefGroup = E8D68FAA2D32BE7600FD6971 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -898,6 +903,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E85B30DF2DA2DF7E007F1260 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/colinc86/LaTeXSwiftUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E85B30E02DA2DF7E007F1260 /* LaTeXSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E85B30DF2DA2DF7E007F1260 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */;
+			productName = LaTeXSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8D68FA12D32BE7600FD6971 /* Project object */;
 }

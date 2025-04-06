@@ -14,9 +14,10 @@ struct ViewerState: Equatable {
 }
 
 enum ViewerEvent: Equatable {
+    case appeared
     case drawingUpdated(PKDrawing)
-    case recognizeRequested
     case switchRecognitionMode(ViewerState.ViewerRecognitionMode)
+    case recognizeRequested
 }
 
 typealias ViewerViewState = ViewerState

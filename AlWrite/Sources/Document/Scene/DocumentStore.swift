@@ -28,6 +28,8 @@ final class DocumentStore: Store {
             viewerStore.handle(.drawingUpdated(drawing))
         case .changeViewerPosition(let position):
             state.viewerPosition = position
+        case .changeViewerProportion(let proportion):
+            state.viewerProportion = proportion
         case .toggleViewer:
             state.isViewerVisible.toggle()
         case .toggleToolPicker:

@@ -1,10 +1,26 @@
 import SwiftUI
 import PencilKit
+import LaTeXSwiftUI
 
 struct ViewerView: View {
     @ObservedObject var viewStore: ViewStore<ViewerState, ViewerEvent>
-
     @State private var mode: ViewerState.ViewerRecognitionMode = .text
+    @State private var refreshCounter: Int = 0
+
+    @Environment(\.scenePhase) private var scenePhase
+
+    private var formattedLatexString: String {
+        guard viewStore.state.recognitionMode == .math,       !viewStore.state.recognizedText.isEmpty
+        else { return "" }
+
+        let text = viewStore.state.recognizedText
+
+        if !text.hasPrefix("$") && !text.hasSuffix("$") {
+            return "$\(text)$"
+        }
+
+        return text
+    }
 
     var body: some View {
         VStack {
@@ -12,6 +28,16 @@ struct ViewerView: View {
             document
         }
         .background(Color(.secondarySystemBackground))
+        .onAppear {
+            viewStore.handle(.appeared)
+            refreshCounter += 1
+        }
+        .onChange(of: viewStore.state.recognizedText) { _, _ in
+            refreshCounter += 1
+        }
+        .onChange(of: viewStore.state.recognitionMode) { _, newValue in
+            refreshCounter += 1
+        }
     }
 
     private var header: some View {
@@ -25,27 +51,9 @@ struct ViewerView: View {
                 Text("Режим распознавания")
             }
             .pickerStyle(.palette)
-            .fixedSize()
             .onChange(of: mode) { _, newValue in
                 viewStore.handle(.switchRecognitionMode(mode))
             }
-
-            Spacer()
-
-            Button {
-                viewStore.handle(.recognizeRequested)
-            } label: {
-                if viewStore.state.isLoading {
-                    ProgressView()
-                        .colorScheme(.dark)
-                } else {
-                    Text("Распознать")
-                }
-            }
-            .controlSize(.regular)
-            .buttonStyle(.borderedProminent)
-            .buttonBorderShape(.capsule)
-            .animation(.smooth, value: viewStore.state.isLoading)
         }
         .padding()
     }
@@ -54,9 +62,16 @@ struct ViewerView: View {
         RoundedRectangle(cornerRadius: 20)
             .fill(Color(.systemBackground))
             .overlay {
-                Text(viewStore.state.recognizedText)
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                if viewStore.state.recognitionMode == .math {
+                    LaTeX(formattedLatexString)
+                        .id("latex_\(refreshCounter)")
+                        .padding()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                } else {
+                    Text(viewStore.state.recognizedText)
+                        .padding()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(.horizontal)

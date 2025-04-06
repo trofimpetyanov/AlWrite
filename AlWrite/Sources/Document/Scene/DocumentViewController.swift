@@ -102,7 +102,7 @@ class DocumentViewController: UIDocumentViewController {
             viewerVC.view.isHidden = false
             viewerVC.view.alpha = 0
             
-            let offscreenTransform = self.offscreenTransform(for: viewStore.state.viewerPosition, view: viewerVC.view)
+            let offscreenTransform = offscreenTransform(for: viewStore.state.viewerPosition, view: viewerVC.view)
             viewerVC.view.transform = offscreenTransform
             
             UIView.animate(
@@ -118,7 +118,13 @@ class DocumentViewController: UIDocumentViewController {
                 }
             )
         } else {
-            let offscreenTransform = self.offscreenTransform(for: viewStore.state.viewerPosition, view: viewerVC.view)
+            let offscreenTransform = offscreenTransform(for: viewStore.state.viewerPosition, view: viewerVC.view)
+            view.layoutIfNeeded()
+
+            let animatingView = UIView(frame: viewerVC.view.frame)
+            animatingView.backgroundColor = viewerVC.view.backgroundColor
+            viewerVC.view.superview?.addSubview(animatingView)
+            viewerVC.view.isHidden = true
 
             UIView.animate(
                 withDuration: duration,
@@ -127,18 +133,18 @@ class DocumentViewController: UIDocumentViewController {
                 initialSpringVelocity: 0.4,
                 options: [.curveEaseIn],
                 animations: {
-                    viewerVC.view.transform = offscreenTransform
-                    viewerVC.view.alpha = 0
+                    animatingView.transform = offscreenTransform
+                    animatingView.alpha = 0
                     self.view.layoutIfNeeded()
                 },
                 completion: { _ in
-                    viewerVC.view.isHidden = true
+                    animatingView.removeFromSuperview()
                     viewerVC.view.transform = .identity
                 }
             )
         }
     }
-    
+
     private func offscreenTransform(for position: DocumentState.ViewerPosition, view: UIView) -> CGAffineTransform {
         switch position {
         case .right:
