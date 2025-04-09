@@ -3,32 +3,41 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		39F115B123B2B82139FF749B /* libPods-AlWrite.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE127959C045207665171533 /* libPods-AlWrite.a */; };
+		E83755612DA7E4FD00A4094E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83755482DA7E4FD00A4094E /* Assets.xcassets */; };
+		E83755622DA7E4FD00A4094E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E837554A2DA7E4FD00A4094E /* LaunchScreen.storyboard */; };
+		E85B30E12DA2DF7E007F1260 /* LaTeXSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = E85B30E02DA2DF7E007F1260 /* LaTeXSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		142468F94F76393F4AC14985 /* Pods-AlWrite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.debug.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.debug.xcconfig"; sourceTree = "<group>"; };
+		A9BF9FCC9A0BC1AC28B6D06B /* Pods-AlWrite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlWrite.release.xcconfig"; path = "Target Support Files/Pods-AlWrite/Pods-AlWrite.release.xcconfig"; sourceTree = "<group>"; };
+		DE127959C045207665171533 /* libPods-AlWrite.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlWrite.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83755482DA7E4FD00A4094E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E83755492DA7E4FD00A4094E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E8BB67332D90BEA400A768DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D68FA92D32BE7600FD6971 /* AlWrite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlWrite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		E8D68FBA2D32BE7700FD6971 /* Exceptions for "AlWrite" folder in "AlWrite" target */ = {
+		E83757052DA809F800A4094E /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				MyCertificate.c,
 			);
 			target = E8D68FA82D32BE7600FD6971 /* AlWrite */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		E8D68FAB2D32BE7600FD6971 /* AlWrite */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				E8D68FBA2D32BE7700FD6971 /* Exceptions for "AlWrite" folder in "AlWrite" target */,
-			);
-			path = AlWrite;
-			sourceTree = "<group>";
-		};
+		E83756912DA809F700A4094E /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
+		E837569C2DA809F700A4094E /* Application */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Application; sourceTree = "<group>"; };
+		E83756A32DA809F700A4094E /* MyScriptCertificate */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (E83757052DA809F800A4094E /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MyScriptCertificate; sourceTree = "<group>"; };
+		E83756DE2DA809F700A4094E /* Sources */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Sources; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +45,60 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E85B30E12DA2DF7E007F1260 /* LaTeXSwiftUI in Frameworks */,
+				39F115B123B2B82139FF749B /* libPods-AlWrite.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62FE5F92971BAB2EA16D7341 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				142468F94F76393F4AC14985 /* Pods-AlWrite.debug.xcconfig */,
+				A9BF9FCC9A0BC1AC28B6D06B /* Pods-AlWrite.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A16C7EE48925503E314B69D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE127959C045207665171533 /* libPods-AlWrite.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E837554B2DA7E4FD00A4094E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E83755482DA7E4FD00A4094E /* Assets.xcassets */,
+				E837554A2DA7E4FD00A4094E /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E8BB67342D90BEA400A768DB /* AlWrite */ = {
+			isa = PBXGroup;
+			children = (
+				E837569C2DA809F700A4094E /* Application */,
+				E83756912DA809F700A4094E /* Core */,
+				E837554B2DA7E4FD00A4094E /* Resources */,
+				E83756A32DA809F700A4094E /* MyScriptCertificate */,
+				E83756DE2DA809F700A4094E /* Sources */,
+				E8BB67332D90BEA400A768DB /* Info.plist */,
+			);
+			path = AlWrite;
+			sourceTree = "<group>";
+		};
 		E8D68FA02D32BE7600FD6971 = {
 			isa = PBXGroup;
 			children = (
-				E8D68FAB2D32BE7600FD6971 /* AlWrite */,
+				E8BB67342D90BEA400A768DB /* AlWrite */,
 				E8D68FAA2D32BE7600FD6971 /* Products */,
+				62FE5F92971BAB2EA16D7341 /* Pods */,
+				9A16C7EE48925503E314B69D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,20 +117,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8D68FBB2D32BE7700FD6971 /* Build configuration list for PBXNativeTarget "AlWrite" */;
 			buildPhases = (
+				7F7B6F5863B495F051F08670 /* [CP] Check Pods Manifest.lock */,
+				E8BB65412D90789100A768DB /* ShellScript */,
 				E8D68FA52D32BE7600FD6971 /* Sources */,
 				E8D68FA62D32BE7600FD6971 /* Frameworks */,
 				E8D68FA72D32BE7600FD6971 /* Resources */,
+				E87D2D592D91C55A00AB7C24 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				E8D68FAB2D32BE7600FD6971 /* AlWrite */,
+				E83756912DA809F700A4094E /* Core */,
+				E837569C2DA809F700A4094E /* Application */,
+				E83756DE2DA809F700A4094E /* Sources */,
 			);
 			name = AlWrite;
-			packageProductDependencies = (
-			);
 			productName = AlWrite;
 			productReference = E8D68FA92D32BE7600FD6971 /* AlWrite.app */;
 			productType = "com.apple.product-type.application";
@@ -91,14 +146,16 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
-				LastUpgradeCheck = 1610;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					E8D68FA82D32BE7600FD6971 = {
 						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
 			buildConfigurationList = E8D68FA42D32BE7600FD6971 /* Build configuration list for PBXProject "AlWrite" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +163,9 @@
 				Base,
 			);
 			mainGroup = E8D68FA02D32BE7600FD6971;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
+			packageReferences = (
+				E85B30DF2DA2DF7E007F1260 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */,
+			);
 			productRefGroup = E8D68FAA2D32BE7600FD6971 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,10 +180,73 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E83755612DA7E4FD00A4094E /* Assets.xcassets in Resources */,
+				E83755622DA7E4FD00A4094E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F7B6F5863B495F051F08670 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlWrite-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E87D2D592D91C55A00AB7C24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Script to copy recognition assets to the app bundle\nRECOGNITION_ASSETS_DIR=\"${SRCROOT}/AlWrite/Resources/recognition-assets\"\nTARGET_DIR=\"${BUILT_PRODUCTS_DIR}/${CONTENTS_FOLDER_PATH}/recognition-assets\"\n\n# Check if recognition assets exist\nif [ -d \"$RECOGNITION_ASSETS_DIR\" ]; then\n    echo \"✅ Found recognition assets at: $RECOGNITION_ASSETS_DIR\"\n    \n    # Create target directory if it doesn't exist\n    mkdir -p \"$TARGET_DIR\"\n    \n    # Copy recognition assets to the app bundle\n    cp -R \"$RECOGNITION_ASSETS_DIR\"/* \"$TARGET_DIR\"\n    \n    echo \"✅ Successfully copied recognition assets to: $TARGET_DIR\"\nelse\n    echo \"❌ Recognition assets not found at: $RECOGNITION_ASSETS_DIR\"\n    exit 1\nfi\n";
+		};
+		E8BB65412D90789100A768DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./retrieve_recognition-assets.sh AlWrite\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8D68FA52D32BE7600FD6971 /* Sources */ = {
@@ -137,16 +258,37 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		E837554A2DA7E4FD00A4094E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E83755492DA7E4FD00A4094E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E8D68FBC2D32BE7700FD6971 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 142468F94F76393F4AC14985 /* Pods-AlWrite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7Q99VT33B;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					../Frameworks,
+					"\"${PODS_ROOT}/Headers/Public/MyScriptInteractiveInk-Runtime\"",
+					"\"${PODS_ROOT}/MyScriptInteractiveInk-Runtime/include\"",
+					"$(SRCROOT)/AlWrite/MyScriptSDK",
+				);
 				INFOPLIST_FILE = AlWrite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -161,6 +303,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trofimpetyanov.AlWrite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AlWrite/MyScriptSDK/IInkUIReferenceImplementation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -168,13 +312,23 @@
 		};
 		E8D68FBD2D32BE7700FD6971 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9BF9FCC9A0BC1AC28B6D06B /* Pods-AlWrite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J7Q99VT33B;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					../Frameworks,
+					"\"${PODS_ROOT}/Headers/Public/MyScriptInteractiveInk-Runtime\"",
+					"\"${PODS_ROOT}/MyScriptInteractiveInk-Runtime/include\"",
+					"$(SRCROOT)/AlWrite/MyScriptSDK",
+				);
 				INFOPLIST_FILE = AlWrite/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -189,6 +343,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.trofimpetyanov.AlWrite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AlWrite/MyScriptSDK/IInkUIReferenceImplementation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -231,7 +387,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -246,6 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/AlWrite/MyScriptSDK";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -294,7 +451,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -303,6 +460,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/AlWrite/MyScriptSDK";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -335,6 +493,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E85B30DF2DA2DF7E007F1260 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/colinc86/LaTeXSwiftUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E85B30E02DA2DF7E007F1260 /* LaTeXSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E85B30DF2DA2DF7E007F1260 /* XCRemoteSwiftPackageReference "LaTeXSwiftUI" */;
+			productName = LaTeXSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E8D68FA12D32BE7600FD6971 /* Project object */;
 }
