@@ -37,17 +37,7 @@ extension DocumentRouter: DocumentRouting {
             return
         }
 
-        let drawingViewController = DrawingSceneBuilder().build()
-        let viewerViewController = ViewerSceneBuilder().build(context: context)
-        let documentViewController = DocumentSceneBuilder().build(
-            router: self,
-            drawingStore: drawingViewController.viewStore,
-            viewerStore: viewerViewController.rootView.viewStore
-        )
-
-        documentViewController.setDrawingViewController(drawingViewController)
-        documentViewController.setViewerViewController(viewerViewController)
-        drawingViewController.delegate = documentViewController
+        let documentViewController = DocumentSceneBuilder().build(router: self)
 
         baseRouter.setRoot(documentViewController, animated: false)
     }

@@ -23,7 +23,7 @@ final class MyScriptRecognitionEngine: RecognitionEngine {
     }
     
     func createRecognizer() -> RecognitionService {
-        let cacheKey = currentMode.description
+        let cacheKey = currentMode.mimeTypeString
         
         if let cachedService = serviceCache[cacheKey] {
             return cachedService

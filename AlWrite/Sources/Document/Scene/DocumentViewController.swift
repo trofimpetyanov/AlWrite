@@ -6,15 +6,20 @@ import SwiftUI
 class DocumentViewController: UIDocumentViewController {
     
     // MARK: - Properties
-    let viewStore: ViewStore<DocumentViewState, DocumentViewEvent>
+
+    let viewStore: ViewStore<DocumentState, DocumentEvent>
     
     private let router: DocumentRouting
+    let toolPicker: PKToolPicker
 
     private var drawingViewController: UIViewController?
     private var viewerViewController: UIViewController?
 
     private var toolPickerItem: UIBarButtonItem?
     private var viewerItem: UIBarButtonItem?
+
+    private var addTextBlockItem: UIBarButtonItem?
+    private var addMathBlockItem: UIBarButtonItem?
 
     private var observations: Set<AnyCancellable> = []
 
@@ -34,9 +39,11 @@ class DocumentViewController: UIDocumentViewController {
     }()
 
     // MARK: - Initialization
-    init(viewStore: ViewStore<DocumentViewState, DocumentViewEvent>, router: DocumentRouting) {
+
+    init(viewStore: ViewStore<DocumentState, DocumentEvent>, router: DocumentRouting, toolPicker: PKToolPicker) {
         self.viewStore = viewStore
         self.router = router
+        self.toolPicker = toolPicker
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -47,7 +54,7 @@ class DocumentViewController: UIDocumentViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupContentStackView()
         setupNavigationBar()
         bindToViewStore()
@@ -64,10 +71,15 @@ class DocumentViewController: UIDocumentViewController {
     override func documentDidOpen() {
         super.documentDidOpen()
         
+        if let doc = alWriteDocument {
+            viewStore.handle(.setDocument(doc))
+        }
+        
         configureViewForCurrentDocument()
     }
 
     // MARK: - Bindings
+
     private func bindToViewStore() {
         viewStore.$state
             .removeDuplicates()
@@ -78,86 +90,32 @@ class DocumentViewController: UIDocumentViewController {
     }
 
     private func update(for state: DocumentState) {
+        toolPickerItem?.isEnabled = !state.blocks.isEmpty
+
         updateToolPickerButton(isVisible: state.isToolPickerVisible)
         updateViewerButton(isVisible: state.isViewerVisible)
-        
+
         if let viewerVC = viewerViewController,
            viewerVC.view.superview != nil,
            viewerVC.view.isHidden != !state.isViewerVisible {
-            animateViewerVisibility(isVisible: state.isViewerVisible)
-        }
-
-        if alWriteDocument?.drawing != state.drawing {
-            alWriteDocument?.drawing = state.drawing
+            updateViewerVisibility(isVisible: state.isViewerVisible)
         }
     }
     
-    // MARK: - Viewer Animation
-    private func animateViewerVisibility(isVisible: Bool) {
+    // MARK: - Viewer Visibility
+
+    private func updateViewerVisibility(isVisible: Bool) {
         guard let viewerVC = viewerViewController else { return }
-        
-        let duration: TimeInterval = 0.4
 
-        if isVisible {
-            viewerVC.view.isHidden = false
-            viewerVC.view.alpha = 0
-            
-            let offscreenTransform = offscreenTransform(for: viewStore.state.viewerPosition, view: viewerVC.view)
-            viewerVC.view.transform = offscreenTransform
-            
-            UIView.animate(
-                withDuration: duration,
-                delay: 0,
-                usingSpringWithDamping: 0.8,
-                initialSpringVelocity: 0.4,
-                options: [.curveEaseOut],
-                animations: {
-                    viewerVC.view.transform = .identity
-                    viewerVC.view.alpha = 1
-                    self.view.layoutIfNeeded()
-                }
-            )
-        } else {
-            let offscreenTransform = offscreenTransform(for: viewStore.state.viewerPosition, view: viewerVC.view)
-            view.layoutIfNeeded()
-
-            let animatingView = UIView(frame: viewerVC.view.frame)
-            animatingView.backgroundColor = viewerVC.view.backgroundColor
-            viewerVC.view.superview?.addSubview(animatingView)
-            viewerVC.view.isHidden = true
-
-            UIView.animate(
-                withDuration: duration,
-                delay: 0,
-                usingSpringWithDamping: 0.8,
-                initialSpringVelocity: 0.4,
-                options: [.curveEaseIn],
-                animations: {
-                    animatingView.transform = offscreenTransform
-                    animatingView.alpha = 0
-                    self.view.layoutIfNeeded()
-                },
-                completion: { _ in
-                    animatingView.removeFromSuperview()
-                    viewerVC.view.transform = .identity
-                }
-            )
+        UIView.animate(withDuration: 0.3) {
+            viewerVC.view.isHidden = !isVisible
+            self.view.layoutIfNeeded()
+            if let drawingVC = self.drawingViewController as? DrawingViewController {
+                drawingVC.invalidateCollectionViewLayout()
+            }
         }
     }
-
-    private func offscreenTransform(for position: DocumentState.ViewerPosition, view: UIView) -> CGAffineTransform {
-        switch position {
-        case .right:
-            return CGAffineTransform(translationX: view.bounds.width, y: 0)
-        case .left:
-            return CGAffineTransform(translationX: -view.bounds.width, y: 0)
-        case .top:
-            return CGAffineTransform(translationX: 0, y: -view.bounds.height)
-        case .bottom:
-            return CGAffineTransform(translationX: 0, y: view.bounds.height)
-        }
-    }
-
+    
     // MARK: - Setup
     func setDrawingViewController(_ viewController: UIViewController) {
         addChild(viewController)
@@ -196,17 +154,15 @@ class DocumentViewController: UIDocumentViewController {
 
         setupToolPickerButton()
         setupViewerButton()
+        navigationItem.rightBarButtonItems = [viewerItem, toolPickerItem].compactMap { $0 }
 
-        guard let toolPickerItem = toolPickerItem, 
-              let viewerItem = viewerItem
-        else { return }
-
-        let itemGroup = UIBarButtonItemGroup(
-            barButtonItems: [toolPickerItem, viewerItem],
+        setupAddBlockButtons()
+        guard let addTextBlockItem = addTextBlockItem, let addMathBlockItem = addMathBlockItem else { return }
+        let centerGroup = UIBarButtonItemGroup(
+            barButtonItems: [addTextBlockItem, addMathBlockItem],
             representativeItem: nil
         )
-        
-        navigationItem.centerItemGroups = [itemGroup]
+        navigationItem.centerItemGroups = [centerGroup]
     }
     
     private func setupToolPickerButton() {
@@ -216,6 +172,7 @@ class DocumentViewController: UIDocumentViewController {
                 self?.viewStore.handle(.toggleToolPicker)
             }
         )
+        updateToolPickerButton(isVisible: viewStore.state.isToolPickerVisible)
     }
     
     private func setupViewerButton() {
@@ -227,11 +184,26 @@ class DocumentViewController: UIDocumentViewController {
         )
     }
     
+    private func setupAddBlockButtons() {
+        addTextBlockItem = UIBarButtonItem(
+            image: UIImage(systemName: "textformat"),
+            primaryAction: UIAction { [weak self] _ in
+                self?.viewStore.handle(.addBlock(type: .text))
+            }
+        )
+        addMathBlockItem = UIBarButtonItem(
+            image: UIImage(systemName: "function"),
+            primaryAction: UIAction { [weak self] _ in
+                self?.viewStore.handle(.addBlock(type: .math))
+            }
+        )
+    }
+    
     private func updateToolPickerButton(isVisible: Bool) {
         let imageName = isVisible ? "pencil.tip.crop.circle.fill" : "pencil.tip.crop.circle"
         toolPickerItem?.image = UIImage(systemName: imageName)
     }
-    
+
     private func updateViewerButton(isVisible: Bool) {
         let imageName = isVisible ? "text.rectangle.page.fill" : "text.rectangle.page"
         viewerItem?.image = UIImage(systemName: imageName)
@@ -243,13 +215,7 @@ class DocumentViewController: UIDocumentViewController {
               isViewLoaded
         else { return }
 
-        viewStore.handle(.drawingChanged(alWriteDocument.drawing))
-    }
-}
-
-extension DocumentViewController: DrawingViewControllerDelegate {
-    func drawingViewController(_ viewController: DrawingViewController, didChangeDrawing drawing: PKDrawing) {
-        viewStore.handle(.drawingChanged(drawing))
+        viewStore.handle(.documentLoaded(blocks: alWriteDocument.blocks))
     }
 }
 

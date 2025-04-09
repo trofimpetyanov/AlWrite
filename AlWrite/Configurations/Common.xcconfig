@@ -1,2 +1,0 @@
-HEADER_SEARCH_PATHS = $(inherited) $(SRCROOT)/Pods/MyScriptInteractiveInk-Runtime/include $(SRCROOT)/AlWrite/MyScriptSDK
-FRAMEWORK_SEARCH_PATHS = $(inherited) $(SRCROOT)/Pods/MyScriptInteractiveInk-Runtime

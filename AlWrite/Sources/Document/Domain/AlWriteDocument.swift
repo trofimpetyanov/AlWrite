@@ -1,12 +1,11 @@
 import SwiftUI
-import UniformTypeIdentifiers
 import PencilKit
 import Combine
 
 class AlWriteDocument: UIDocument {
-    var drawing: PKDrawing = PKDrawing() {
+    var blocks: [DrawingBlock] = [] {
         didSet {
-            if oldValue != drawing {
+            if oldValue != blocks {
                 updateChangeCount(.done)
             }
         }
@@ -14,7 +13,7 @@ class AlWriteDocument: UIDocument {
 
     override func contents(forType typeName: String) throws -> Any {
         let documentData = AlWriteDocumentData(
-            drawing: drawing
+            blocks: blocks
         )
 
         return try JSONEncoder().encode(documentData)
@@ -24,6 +23,6 @@ class AlWriteDocument: UIDocument {
         guard let data = contents as? Data else { return }
 
         let documentData = try JSONDecoder().decode(AlWriteDocumentData.self, from: data)
-        drawing = documentData.drawing
+        blocks = documentData.blocks
     }
 }

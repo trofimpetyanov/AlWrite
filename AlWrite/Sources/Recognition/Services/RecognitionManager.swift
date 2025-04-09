@@ -3,11 +3,8 @@ import PencilKit
 
 @MainActor
 protocol HandwritingRecognizer: AnyObject {
-
-    var delegate: HandwritingRecognitionDelegate? { get set }
-
     func setRecognitionMode(_ mode: StandardRecognitionMode)
-    func processDrawing(_ drawing: PKDrawing)
+    func processDrawing(_ drawing: PKDrawing) async throws -> String
 }
 
 @MainActor
@@ -15,8 +12,6 @@ class HandwritingRecognitionManager: HandwritingRecognizer {
     private let recognitionEngine: RecognitionEngine
     private var recognitionService: RecognitionService
     private var isServiceInitialized = false
-    
-    weak var delegate: HandwritingRecognitionDelegate?
     
     init(engineFactory: RecognitionEngineFactory = RecognitionEngineFactory()) {
         self.recognitionEngine = engineFactory.createDefaultEngine()
@@ -34,45 +29,24 @@ class HandwritingRecognitionManager: HandwritingRecognizer {
         isServiceInitialized = true
     }
     
-    func processDrawing(_ drawing: PKDrawing) {
+    func processDrawing(_ drawing: PKDrawing) async throws -> String {
         if !isServiceInitialized {
             reinitializeService()
         }
 
         if drawing.strokes.isEmpty {
-            delegate?.handwritingRecognitionDidComplete(text: "", error: RecognitionError.noStrokesToRecognize)
-            return
+            throw RecognitionError.noStrokesToRecognize
         }
         
-        Task {
-            do {
-                let text = try await recognitionService.processDrawing(drawing)
-
-                await MainActor.run {
-                    delegate?.handwritingRecognitionDidComplete(text: text, error: nil)
-                }
-            } catch {
-                if error is RecognitionError {
-                    reinitializeService()
-                    
-                    do {
-                        let text = try await recognitionService.processDrawing(drawing)
-
-                        await MainActor.run {
-                            delegate?.handwritingRecognitionDidComplete(text: text, error: nil)
-                        }
-                        return
-                    } catch {
-                        await MainActor.run {
-                            delegate?.handwritingRecognitionDidComplete(text: "", error: error)
-                        }
-                    }
-                }
-                
-                await MainActor.run {
-                    delegate?.handwritingRecognitionDidComplete(text: "", error: error)
-                }
+        do {
+            return try await recognitionService.processDrawing(drawing)
+        } catch {
+            if error is RecognitionError {
+                print("Recognition failed, retrying after reinitialization...")
+                reinitializeService()
+                return try await recognitionService.processDrawing(drawing)
             }
+            throw error
         }
     }
 }

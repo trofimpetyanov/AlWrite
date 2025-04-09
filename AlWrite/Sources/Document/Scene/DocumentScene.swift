@@ -1,5 +1,6 @@
 import Foundation
 import PencilKit
+import Combine
 
 struct DocumentState: Equatable {
     enum ViewerPosition: Equatable {
@@ -28,20 +29,29 @@ struct DocumentState: Equatable {
     }
 
     var document: AlWriteDocument?
-    var drawing: PKDrawing = PKDrawing()
+    var blocks: [DrawingBlock] = []
     var isViewerVisible: Bool = false
     var isToolPickerVisible: Bool = false
     var viewerPosition: ViewerPosition = .right
     var viewerProportion: ViewerProportionState = .half
+
+    var isRecognitionLoading: Bool = false
+    var combinedRecognizedText: String = ""
 }
 
 enum DocumentEvent {
-    case drawingChanged(PKDrawing)
+    case setDocument(AlWriteDocument)
+    case documentLoaded(blocks: [DrawingBlock])
+    
+    case addBlock(type: DrawingBlock.BlockType)
+    case deleteRequested(id: UUID)
+    case updateBlockDrawing(id: UUID, drawing: PKDrawing)
+    
+    case recognitionProcessNeeded
+    case recognitionCompleted(Result<String, Error>)
+
     case changeViewerPosition(DocumentState.ViewerPosition)
     case changeViewerProportion(DocumentState.ViewerProportionState)
     case toggleViewer
     case toggleToolPicker
 }
-
-typealias DocumentViewState = DocumentState
-typealias DocumentViewEvent = DocumentEvent 

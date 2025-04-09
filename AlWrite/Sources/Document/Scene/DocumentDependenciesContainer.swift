@@ -3,15 +3,12 @@ import UIKit
 import PencilKit
 
 @MainActor
-final class DocumentDependenciesContainer {
-    let drawingStore: ViewStore<DrawingViewState, DrawingViewEvent>
-    let viewerStore: ViewStore<ViewerViewState, ViewerViewEvent>
+class DocumentDependenciesContainer {
+    let recognitionManager: HandwritingRecognizer
 
     init(
-        drawingStore: ViewStore<DrawingViewState, DrawingViewEvent>,
-        viewerStore: ViewStore<ViewerViewState, ViewerViewEvent>
+        recognitionManager: HandwritingRecognizer
     ) {
-        self.drawingStore = drawingStore
-        self.viewerStore = viewerStore
+        self.recognitionManager = recognitionManager
     }
 }

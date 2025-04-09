@@ -1,15 +1,9 @@
-import Foundation
+import UIKit
+import PencilKit
 
 @MainActor
 struct DrawingSceneBuilder {
-    func build() -> DrawingViewController {
-        let store = DrawingStore(
-            dependenciesContainer: DrawingDependenciesContainer()
-        )
-
-        let viewStore = ViewStore(store)
-        let viewController = DrawingViewController(viewStore: viewStore)
-        
-        return viewController
+    func build(viewStore: ViewStore<DocumentState, DocumentEvent>, toolPicker: PKToolPicker) -> DrawingViewController {
+        return DrawingViewController(viewStore: viewStore, toolPicker: toolPicker)
     }
 }

@@ -12,25 +12,29 @@ fi
 
 ProjectRootFolder=$1
 
-if [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/diagram.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/raw-content.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/math.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/en_US.conf" ]; then
+if [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/diagram.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/raw-content.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/math.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/en_US.conf" ] ||
+[ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/ru_RU.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/math2.conf" ] || [ ! -f "$ProjectRootFolder/Resources/recognition-assets/conf/raw-content2.conf" ]; then
 
 echo MyScript en-US recognition assets retriever
 
-curl -O https://download.myscript.com/iink/recognitionAssets_iink_3.2/myscript-iink-recognition-diagram.zip
-unzip -o myscript-iink-recognition-diagram.zip -d $ProjectRootFolder/Resources/
-
-curl -O https://download.myscript.com/iink/recognitionAssets_iink_3.2/myscript-iink-recognition-raw-content.zip
-unzip -o myscript-iink-recognition-raw-content.zip -d $ProjectRootFolder/Resources/
-
-curl -O https://download.myscript.com/iink/recognitionAssets_iink_3.2/myscript-iink-recognition-math.zip
+curl -O https://download.myscript.com/iink/recognitionAssets_iink_4.0/myscript-iink-recognition-math.zip
 unzip -o myscript-iink-recognition-math.zip -d $ProjectRootFolder/Resources/
 
-curl -O https://download.myscript.com/iink/recognitionAssets_iink_3.2/myscript-iink-recognition-text-en_US.zip
+curl -O https://download.myscript.com/iink/recognitionAssets_iink_4.0/myscript-iink-recognition-math2.zip
+unzip -o myscript-iink-recognition-math2.zip -d $ProjectRootFolder/Resources/
+
+curl -O https://download.myscript.com/iink/recognitionAssets_iink_4.0/myscript-iink-recognition-text-en_US.zip
 unzip -o myscript-iink-recognition-text-en_US.zip -d $ProjectRootFolder/Resources/
+
+curl -O https://download.myscript.com/iink/recognitionAssets_iink_4.0/myscript-iink-recognition-text-ru_RU.zip
+unzip -o myscript-iink-recognition-text-ru_RU.zip -d $ProjectRootFolder/Resources/
 
 rm myscript-iink-recognition-diagram.zip
 rm myscript-iink-recognition-raw-content.zip
+rm myscript-iink-recognition-raw-content2.zip
 rm myscript-iink-recognition-math.zip
+rm myscript-iink-recognition-math2.zip
 rm myscript-iink-recognition-text-en_US.zip
+rm myscript-iink-recognition-text-ru_RU.zip
 
 fi

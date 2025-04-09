@@ -1,12 +1,26 @@
 import Foundation
 import PencilKit
 
-enum RecognitionError: Error {
+enum RecognitionError: Error, Equatable {
     case engineNotInitialized
     case noSupportedMimeTypes
     case invalidMimeType
     case exportFailed(underlyingError: Error)
     case noStrokesToRecognize
+
+    static func == (lhs: RecognitionError, rhs: RecognitionError) -> Bool {
+        switch (lhs, rhs) {
+        case (.engineNotInitialized, .engineNotInitialized),
+            (.noSupportedMimeTypes, .noSupportedMimeTypes),
+            (.invalidMimeType, .invalidMimeType),
+            (.noStrokesToRecognize, .noStrokesToRecognize):
+            return true
+        case (.exportFailed(let lhsError), .exportFailed(let rhsError)):
+            return lhsError as NSError == rhsError as NSError
+        default:
+            return false
+        }
+    }
 }
 
 protocol RecognitionMode {
@@ -25,8 +39,4 @@ protocol RecognitionEngine {
     var currentMode: RecognitionMode { get }
     func setMode(_ mode: RecognitionMode)
     func createRecognizer() -> RecognitionService
-}
-
-protocol RecognitionDelegate: AnyObject {
-    func recognitionDidComplete(result: Result<String, Error>)
 }
